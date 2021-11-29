@@ -1,0 +1,101 @@
+<div class="container emp-profile">
+  <form method="">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="profile-img">
+          <img src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
+          <div class="file btn btn-lg btn-primary">
+            {{ employeeObj.employeeid }}
+            <input type="file" name="file" />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="profile-head">
+          <h5>
+            {{ employeeObj.firstName }}
+            {{ employeeObj.lastName }}
+          </h5>
+          <h6></h6>
+          <p class="proile-rating">
+            svnr : <span>{{ employeeObj.svnr }}</span>
+          </p>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                id="home-tab"
+                data-toggle="tab"
+                href="#home"
+                role="tab"
+                aria-controls="home"
+                aria-selected="true"
+                >Department</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="profile-tab"
+                data-toggle="tab"
+                href="#profile"
+                role="tab"
+                aria-controls="profile"
+                aria-selected="false"
+                >Other Info</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <input
+          type="submit"
+          class="profile-edit-btn"
+          name="btnAddMore"
+          value="Back to Home"
+          [routerLink]="['/']"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="profile-work">
+          <p>Personal info</p>
+          <a href="">ID: {{ employeeObj.employeeid }}</a
+          ><br />
+          <a href="">Name :{{ employeeObj.firstName }}</a
+          ><br />
+          <a href="">Start date: {{ employeeObj.start_date | date }}</a
+          ><br />
+          <a href="">End Date :{{ employeeObj.end_date | date }}</a
+          ><br />
+          <a href=""
+            >Active: {{ employeeObj.active ? "Active" : "Inactive" }}</a
+          >
+
+          ><br />
+          <a href=""></a><br />
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="tab-content profile-tab" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="home"
+            role="tabpanel"
+            aria-labelledby="home-tab"
+          >
+            {{ departmentname }}
+          </div>
+          <div
+            class="tab-pane fade"
+            id="profile"
+            role="tabpanel"
+            aria-labelledby="profile-tab"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

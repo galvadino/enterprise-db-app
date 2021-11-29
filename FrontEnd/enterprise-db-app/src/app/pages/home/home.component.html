@@ -1,0 +1,421 @@
+<div
+  class="p-4 p-md-5 mb-4 text-white rounded bg-dark card-shadow"
+  style="margin-top: 0px"
+>
+  <div class="col-md-6 px-0">
+    <h1 class="display-4 font-italic">Enterprise Database Application</h1>
+    <p class="lead my-3">Managing employees and departments.</p>
+    <p class="lead mb-0">
+      <a href="#" class="text-white fw-bold">DKE PR</a>
+    </p>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="text-right">
+        <button
+          type="button"
+          class="btn btn-info"
+          data-toggle="collapse"
+          data-target="#demo"
+        >
+          Add Staff
+        </button>
+        <button
+          style="margin-left: 20px"
+          type="button"
+          class="btn btn-info"
+          [routerLink]="['/department']"
+        >
+          Department
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row" style="margin-bottom: 20px">
+  <div id="demo" class="collapse">
+    <div class="card card-shadow">
+      <div class="card-body">
+        <form class="needs-validation">
+          <div class="row">
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom01">SVNR</label>
+              <input
+                type="number"
+                class="form-control"
+                id="validationCustom01"
+                placeholder="First name"
+                [(ngModel)]="addEmployeeObj.svnr"
+                [ngModelOptions]="{ standalone: true }"
+                required
+              />
+              <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom01">firstName</label>
+              <input
+                type="text"
+                class="form-control"
+                id="validationCustom01"
+                placeholder="First name"
+                [(ngModel)]="addEmployeeObj.firstName"
+                [ngModelOptions]="{ standalone: true }"
+                required
+              />
+              <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom02">startDate</label>
+              <input
+                class="form-control"
+                type="datetime-local"
+                [(ngModel)]="addEmployeeObj.start_date"
+                [ngModelOptions]="{ standalone: true }"
+                id="example-datetime-local-input"
+              />
+              <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustomUsername">endDate</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupPrepend">@</span>
+                </div>
+                <input
+                  class="form-control"
+                  type="datetime-local"
+                  [(ngModel)]="addEmployeeObj.end_date"
+                  [ngModelOptions]="{ standalone: true }"
+                  id="example-datetime-local-input"
+                />
+                <div class="invalid-feedback">Please choose a username.</div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom03">loginName</label>
+              <input
+                type="text"
+                class="form-control"
+                id="validationCustom03"
+                placeholder="login name"
+                [(ngModel)]="addEmployeeObj.login_name"
+                [ngModelOptions]="{ standalone: true }"
+                required
+              />
+              <div class="invalid-feedback">
+                Please provide a valid login name.
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom04">password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="validationCustom04"
+                placeholder="password"
+                [(ngModel)]="addEmployeeObj.password"
+                [ngModelOptions]="{ standalone: true }"
+                required
+              />
+              <div class="invalid-feedback">
+                Please provide a valid password.
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom05">department id</label>
+              <input
+                type="text"
+                class="form-control"
+                id="validationCustom05"
+                placeholder="Zip"
+                [(ngModel)]="addEmployeeObj.department"
+                [ngModelOptions]="{ standalone: true }"
+                required
+              />
+              <div class="invalid-feedback">Please provide a valid zip.</div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom05">Active</label>
+              <select
+                class="form-control"
+                id="validationCustom05"
+                name="activeStatus"
+                [(ngModel)]="addEmployeeObj.active"
+              >
+                <option [ngValue]="1">Active</option>
+                <option [ngValue]="0">InActive</option>
+              </select>
+              <div class="invalid-feedback">Please provide a valid zip.</div>
+            </div>
+          </div>
+
+          <button
+            class="btn btn-success"
+            type="submit"
+            (click)="addEmployee()"
+            data-toggle="collapse"
+            data-target="#demo"
+          >
+            Add Employee
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<table class="table table-responsive table-bordered table-hover card-shadow">
+  <thead class="table-light">
+    <tr>
+      <th class="text-center" scope="col">#id</th>
+      <th class="text-center" scope="col">Name</th>
+      <th class="text-center" scope="col">last Name</th>
+      <th class="text-center" scope="col">login Name</th>
+      <th class="text-center" scope="col">svnr</th>
+      <th class="text-center" scope="col">department</th>
+      <th class="text-center" scope="col">Active</th>
+      <th class="text-center" scope="col">Start date</th>
+      <th class="text-center" scope="col">End Date</th>
+      <th class="text-center" scope="col">Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let staff of allEmployees; let i = index">
+      <th scope="row">{{ staff.employeeid }}</th>
+      <td class="text-center">{{ staff.firstName }}</td>
+      <td class="text-center">{{ staff.lastName }}</td>
+      <td class="text-center">{{ staff.login_name }}</td>
+      <td class="text-center">{{ staff.svnr }}</td>
+      <td class="text-center">{{ staff.department }}</td>
+      <td class="text-center">
+        <div *ngIf="staff.active; then thenBlock; else elseBlock"></div>
+        <ng-template #thenBlock
+          ><span class="badge bg-success">Active</span></ng-template
+        >
+        <ng-template #elseBlock
+          ><span class="badge bg-danger">InActive</span></ng-template
+        >
+      </td>
+      <td class="text-center">{{ staff.start_date | date: "yyyy-MM-dd" }}</td>
+      <td class="text-center">{{ staff.end_date | date: "yyyy-MM-dd" }}</td>
+      <td class="text-center">
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="viewEmployee(staff.employeeid)"
+          >
+            View
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            (click)="editEmployee(staff.employeeid)"
+            data-toggle="modal"
+            data-target="#editModal"
+          >
+            Edit
+          </button>
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="deleteStaff(staff.employeeid)"
+            data-toggle="modal"
+            data-target="#deleteModal"
+          >
+            delete
+          </button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Edit -->
+
+<!-- Modal Edit -->
+<div
+  class="modal fade bd-example-modal-lg"
+  id="editModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="needs-validation">
+          <div class="row">
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom01">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="editEmployeeObj.firstName"
+                placeholder="First name"
+                required
+                [(ngModel)]="editEmployeeObj.firstName"
+                [ngModelOptions]="{ standalone: true }"
+              />
+              <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom01">department</label>
+              <input
+                type="text"
+                class="form-control"
+                id="editEmployeeObj.department"
+                placeholder="First name"
+                required
+                [(ngModel)]="editEmployeeObj.department"
+                [ngModelOptions]="{ standalone: true }"
+              />
+              <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom02">startDate</label>
+              <input
+                class="form-control"
+                type="datetime-local"
+                [(ngModel)]="editEmployeeObj.start_date"
+                [ngModelOptions]="{ standalone: true }"
+                id="example-datetime-local-input"
+              />
+              <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustomUsername">End Date</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupPrepend">@</span>
+                </div>
+                <input
+                  class="form-control"
+                  type="datetime-local"
+                  [(ngModel)]="editEmployeeObj.end_date"
+                  [ngModelOptions]="{ standalone: true }"
+                  id="example-datetime-local-input"
+                />
+                <div class="invalid-feedback">Please choose a username.</div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom03">svnr</label>
+              <input
+                type="text"
+                class="form-control"
+                id="validationCustom03"
+                placeholder="City"
+                [(ngModel)]="editEmployeeObj.svnr"
+                [ngModelOptions]="{ standalone: true }"
+                required
+              />
+              <div class="invalid-feedback">Please provide a valid city.</div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom04">Last NAme</label>
+              <input
+                type="text"
+                class="form-control"
+                id="validationCustom04"
+                placeholder="State"
+                [(ngModel)]="editEmployeeObj.lastName"
+                [ngModelOptions]="{ standalone: true }"
+                required
+              />
+              <div class="invalid-feedback">Please provide a valid state.</div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom05">password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="validationCustom05"
+                placeholder="Zip"
+                [(ngModel)]="editEmployeeObj.password"
+                [ngModelOptions]="{ standalone: true }"
+                required
+              />
+              <div class="invalid-feedback">
+                Please provide a valid password.
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom05">Status</label>
+              <select
+                class="form-control"
+                id="validationCustom05"
+                name="activeStatus"
+                [(ngModel)]="editEmployeeObj.active"
+              >
+                <option [ngValue]="1">active</option>
+                <option [ngValue]="0">InActive</option>
+              </select>
+              <div class="invalid-feedback">Please provide a valid zip.</div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success" type="submit" data-dismiss="modal">
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-dismiss="modal"
+              (click)="editStaffrequest()"
+            >
+              Save changes
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="deleteModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">Staff was deleted successfully</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

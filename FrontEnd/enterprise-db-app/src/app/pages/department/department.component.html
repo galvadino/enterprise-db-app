@@ -1,0 +1,147 @@
+<button
+  type="button"
+  class="btn btn-primary"
+  data-toggle="modal"
+  data-target="#exampleModal"
+>
+  Add department
+</button>
+
+<div class="py-5">
+  <div class="container">
+    <div class="row">
+      <div
+        *ngFor="let department of allDepartments"
+        class="col-md-4"
+        style="margin-bottom: 15px"
+        id="cell"
+      >
+        <div class="card" style="padding: 20px">
+          <div class="card-block">
+            <h4 class="card-title">
+              {{ department.departmentId }} - {{ department.name }}
+            </h4>
+            <h4 class="card-title"></h4>
+            <h6 class="card-subtitle text-muted"></h6>
+            <p class="card-text p-y-1"></p>
+            <a
+              class="card-link"
+              (click)="deleteDepartment(department.departmentId)"
+              >delete</a
+            >
+            <a
+              class="card-link"
+              (click)="editDepartment(department.departmentId)"
+              data-toggle="modal"
+              data-target="#editmodal"
+              >edit</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal add-->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p>add department</p>
+      </div>
+      <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+        <div class="modal-body">
+          <div class="row">
+            <div class="form-group col-3">
+              <label for="id">id</label>
+              <input
+                type="number"
+                class="form-control"
+                id="id"
+                aria-describedby="idHelp"
+                placeholder="Enter id"
+                formControlName="departmentId"
+              />
+            </div>
+            <div class="form-group col-9">
+              <label for="exampleInputPassword1">Department name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputPassword1"
+                placeholder="name"
+                formControlName="name"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <button type="submit" class="btn btn-primary">Save changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal delete-->
+<div
+  class="modal fade"
+  id="editmodal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="editmodal"
+  aria-hidden="true"
+  #editmodal
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p>add department</p>
+      </div>
+      <form [formGroup]="edit" (ngSubmit)="updateDepartment()">
+        <div class="modal-body">
+          <div class="row">
+            <div class="form-group col-3">
+              <label for="id">id</label>
+              <input
+                type="number"
+                class="form-control"
+                id="id"
+                aria-describedby="idHelp"
+                placeholder="Enter id"
+                formControlName="departmentId"
+              />
+            </div>
+            <div class="form-group col-9">
+              <label for="exampleInputPassword1">Department name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputPassword1"
+                placeholder="name"
+                formControlName="name"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <button type="submit" class="btn btn-primary">Save changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
