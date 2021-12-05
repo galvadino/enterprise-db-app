@@ -21,12 +21,12 @@ export class DepartmentService {
     );
   }
   deleteDepartment(id: string) {
-    return this.http.delete(environment.API_URL + `/department/${id}`);
+    return this.http.delete(environment.API_URL + `/departments/delete/${id}`);
   }
   patchDepartment(id: string, department: DepartmentEntity) {
     return this.http.patch(
       environment.API_URL + `/departments/${id}`,
-      department
+      {name:department.name}
     );
   }
   postDepartment(department: DepartmentEntity) {

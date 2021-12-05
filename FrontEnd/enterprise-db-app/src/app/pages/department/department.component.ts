@@ -11,6 +11,7 @@ import { FormBuilder } from '@angular/forms';
 export class DepartmentComponent implements OnInit {
   allDepartments: any[] = [];
   @ViewChild('editmodal') editmodal: any = null;
+  @ViewChild('addmodal') addmodal: any = null;
 
   checkoutForm = this.fb.group({
     departmentId: 0,
@@ -41,6 +42,8 @@ export class DepartmentComponent implements OnInit {
       .subscribe((data: any) => {
         this.allDepartments.push(data);
         this.checkoutForm.reset();
+        this.addmodal.nativeElement.click(); //<-- here
+
       });
 
     console.warn('Your order has been submitted', this.checkoutForm.value);
@@ -48,12 +51,17 @@ export class DepartmentComponent implements OnInit {
   }
 
   deleteDepartment(id: any) {
-    this.department.deleteDepartment(id).subscribe(() => {
-      this.allDepartments = this.allDepartments.filter(
-        (department) => department.departmentId !== id
-      );
-      window.alert('Department deleted');
-    });
+    if (confirm('Are you sure to delete department with id = ' + id)) {
+      this.department.deleteDepartment(id).subscribe(() => {
+        this.allDepartments = this.allDepartments.filter(
+          (department) => department.departmentId !== id
+        );
+        window.alert('Department deleted');
+      },
+      error => {
+        window.alert("id is not unique")
+      });
+    }
   }
   editDepartment(id: any) {
     this.department.getDepartment(id).subscribe((data: any) => {

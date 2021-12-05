@@ -51,16 +51,17 @@
   role="dialog"
   aria-labelledby="exampleModalLabel"
   aria-hidden="true"
+  #addmodal
 >
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <p>add department</p>
+        <p>Add department</p>
       </div>
       <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
         <div class="modal-body">
           <div class="row">
-            <div class="form-group col-3">
+         <!--    <div class="form-group col-3">
               <label for="id">id</label>
               <input
                 type="number"
@@ -70,8 +71,8 @@
                 placeholder="Enter id"
                 formControlName="departmentId"
               />
-            </div>
-            <div class="form-group col-9">
+            </div>-->
+            <div class="form-group col-12">
               <label for="exampleInputPassword1">Department name</label>
               <input
                 type="text"
@@ -87,14 +88,14 @@
           <button type="button" class="btn btn-secondary" data-dismiss="modal">
             Close
           </button>
-          <button type="submit" class="btn btn-primary">Save changes</button>
+          <button type="submit" class="btn btn-primary">Add</button>
         </div>
       </form>
     </div>
   </div>
 </div>
 
-<!-- Modal delete-->
+<!-- Modal edit-->
 <div
   class="modal fade"
   id="editmodal"
@@ -107,7 +108,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <p>add department</p>
+        <p>Edit department</p>
       </div>
       <form [formGroup]="edit" (ngSubmit)="updateDepartment()">
         <div class="modal-body">

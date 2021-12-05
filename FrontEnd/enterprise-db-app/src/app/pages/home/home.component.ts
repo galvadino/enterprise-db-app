@@ -52,12 +52,14 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['viewemployee', id]);
   }
   deleteStaff(id: any): any {
-    this.employee.deleteEmployee(id).subscribe((res) => {
-      //TODO
-      console.log(res);
-    });
-    location.reload();
+    if (confirm('Are you sure to delete ' + id)) {
+      this.employee.deleteEmployee(id).subscribe((res) => {
+        console.log(res);
+        this.ngOnInit();
+      });
   }
+  
+}
   editEmployee(id: any): any {
     this.employee.getEmployee(id).subscribe((res) => {
       this.editEmployeeObj = res;
@@ -70,6 +72,7 @@ export class HomeComponent implements OnInit {
       .patchEmployee(this.editEmployeeObj.employeeid, this.editEmployeeObj)
       .subscribe((res) => {
         console.log(this.editEmployeeObj);
+        this.ngOnInit();
       });
     console.log(this.editEmployeeObj);
     //location.reload();
