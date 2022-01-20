@@ -1,0 +1,402 @@
+<div class="container">
+  <!--- Target Config --->
+  <div
+    class="p-4 p-md-5 mb-4 text-white rounded bg-dark card-shadow"
+    style="margin-top: 0px"
+  >
+    <h1>Target config</h1>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="text-right">
+          <button
+            type="button"
+            class="btn btn-info"
+            data-toggle="collapse"
+            data-target="#demo"
+          >
+            Add Target config
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--- add Target State --->
+  <div class="row justify-content-md-center" style="margin-bottom: 20px">
+    <div id="demo" class="collapse">
+      <div class="card card-shadow">
+        <div class="card-body">
+          <form
+            class="needs-validation"
+            [formGroup]="addTargetConfig"
+            (ngSubmit)="onSubmit()"
+            novalidate
+          >
+            <div class="row justify-content-md-center">
+              <!--- Target State --->
+              <div class="col-md-4 mb-4">
+                <label for="validationCustom01">Employee Id </label>
+                <div>
+                  <select
+                    class="form-select"
+                    aria-label="Active select"
+                    formControlName="checkEmployeeId"
+                  >
+                    <option [ngValue]="1">True</option>
+                    <option [ngValue]="2">False</option>
+                  </select>
+                </div>
+              </div>
+              <!--- Target State --->
+              <div class="col-md-4 mb-4">
+                <label for="validationCustom01">First name </label>
+                <div>
+                  <select
+                    class="form-select"
+                    aria-label="Active select"
+                    formControlName="checkFirstName"
+                  >
+                    <option [ngValue]="1">True</option>
+                    <option [ngValue]="2">False</option>
+                  </select>
+                </div>
+              </div>
+              <!--- Target State --->
+              <div class="col-md-4 mb-4">
+                <label for="validationCustom01">Last name </label>
+                <div>
+                  <select
+                    class="form-select"
+                    aria-label="Active select"
+                    formControlName="checkLastName"
+                  >
+                    <option [ngValue]="1">True</option>
+                    <option [ngValue]="2">False</option>
+                  </select>
+                </div>
+              </div>
+              <!--- Target State --->
+              <div class="col-md-4 mb-4">
+                <label for="validationCustom01">Login Name </label>
+                <div>
+                  <select
+                    class="form-select"
+                    aria-label="Active select"
+                    formControlName="checkLoginName"
+                  >
+                    <option [ngValue]="1">True</option>
+                    <option [ngValue]="2">False</option>
+                  </select>
+                </div>
+              </div>
+              <!--- Target State --->
+              <div class="col-md-4 mb-4">
+                <label for="validationCustom01">Check SVNR </label>
+                <div>
+                  <select
+                    class="form-select"
+                    aria-label="Active select"
+                    formControlName="checkSVNR"
+                  >
+                    <option [ngValue]="1">True</option>
+                    <option [ngValue]="2">False</option>
+                  </select>
+                </div>
+              </div>
+              <!--- Target State --->
+              <div class="col-md-4 mb-4">
+                <label for="validationCustom01">Check Start Date </label>
+                <div>
+                  <select
+                    class="form-select"
+                    aria-label="Active select"
+                    formControlName="checkStartDate"
+                  >
+                    <option [ngValue]="1">True</option>
+                    <option [ngValue]="2">False</option>
+                  </select>
+                </div>
+              </div>
+              <!--- Target State --->
+              <div class="col-md-4 mb-4">
+                <label for="validationCustom01">Check End Date </label>
+                <div>
+                  <select
+                    class="form-select"
+                    aria-label="Active select"
+                    formControlName="checkEndDate"
+                  >
+                    <option [ngValue]="1">True</option>
+                    <option [ngValue]="2">False</option>
+                  </select>
+                </div>
+              </div>
+              <!--- Target State --->
+              <div class="col-md-4 mb-4">
+                <label for="validationCustom01">Check Password </label>
+                <div>
+                  <select
+                    class="form-select"
+                    aria-label="Active select"
+                    formControlName="check_password"
+                  >
+                    <option [ngValue]="1">True</option>
+                    <option [ngValue]="2">False</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-sm-12 col-xs-12">
+                <label for="submitbutton">Submit</label>
+                <button
+                  id="submitbutton"
+                  class="btn btn-success btn-block w-100"
+                  type="submit"
+                  data-toggle="collapse"
+                  data-target="#demo"
+                >
+                  Add Target Config
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <table class="table table-responsive table-bordered table-hover card-shadow">
+    <thead class="table-light">
+      <tr>
+        <th class="text-center" scope="col">ID</th>
+        <th class="text-center" scope="col">Employee Id</th>
+        <th class="text-center" scope="col">First name</th>
+        <th class="text-center" scope="col">Last name</th>
+        <th class="text-center" scope="col">Login Name</th>
+        <th class="text-center" scope="col">Check SVNR</th>
+        <th class="text-center" scope="col">Check Start Date</th>
+        <th class="text-center" scope="col">Check End Date</th>
+        <th class="text-center" scope="col">Check Password</th>
+        <th class="text-center" scope="col">Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let targetconfig of targetconfigs; let i = index">
+        <td class="text-center">{{ targetconfig.targetconfig_id }}</td>
+        <td class="text-center">
+          {{ targetconfig.checkEmployeeId === 1 ? "True" : "False" }}
+        </td>
+        <td class="text-center">
+          {{ targetconfig.checkFirstName === 1 ? "True" : "False" }}
+        </td>
+        <td class="text-center">
+          {{ targetconfig.checkLastName === 1 ? "True" : "False" }}
+        </td>
+        <td class="text-center">
+          {{ targetconfig.checkLoginName === 1 ? "True" : "False" }}
+        </td>
+        <td class="text-center">
+          {{ targetconfig.checkSVNR === 1 ? "True" : "False" }}
+        </td>
+        <td class="text-center">
+          {{ targetconfig.checkStartDate === 1 ? "True" : "False" }}
+        </td>
+        <td class="text-center">
+          {{ targetconfig.checkEndDate === 1 ? "True" : "False" }}
+        </td>
+        <td class="text-center">
+          {{ targetconfig.check_password === 1 ? "True" : "False" }}
+        </td>
+
+        <td class="text-center">
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-toggle="modal"
+              data-target="#editModal"
+              (click)="getTargetConfig(targetconfig.targetconfig_id)"
+            >
+              Edit
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-toggle="modal"
+              data-target="#deleteModal"
+              (click)="deleteTargetConfig(targetconfig.targetconfig_id)"
+            >
+              delete
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!--- Edit Modal --->
+
+<!-- Modal Edit -->
+<div
+  class="modal fade bd-example-modal-lg"
+  id="editModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+  #editModal
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Change User</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form
+          class="needs-validation"
+          class="needs-validation"
+          [formGroup]="editTargetConfig"
+          (ngSubmit)="editTargetConfigs()"
+          novalidate
+        >
+          <div class="row justify-content-md-center">
+            <!--- Target State --->
+            <div class="col-md-4 mb-4">
+              <label for="validationCustom01">Employee Id </label>
+              <div>
+                <select
+                  class="form-select"
+                  aria-label="Active select"
+                  formControlName="checkEmployeeId"
+                >
+                  <option [ngValue]="1">True</option>
+                  <option [ngValue]="2">False</option>
+                </select>
+              </div>
+            </div>
+            <!--- Target State --->
+            <div class="col-md-4 mb-4">
+              <label for="validationCustom01">First name </label>
+              <div>
+                <select
+                  class="form-select"
+                  aria-label="Active select"
+                  formControlName="checkFirstName"
+                >
+                  <option [ngValue]="1">True</option>
+                  <option [ngValue]="2">False</option>
+                </select>
+              </div>
+            </div>
+            <!--- Target State --->
+            <div class="col-md-4 mb-4">
+              <label for="validationCustom01">Last name </label>
+              <div>
+                <select
+                  class="form-select"
+                  aria-label="Active select"
+                  formControlName="checkLastName"
+                >
+                  <option [ngValue]="1">True</option>
+                  <option [ngValue]="2">False</option>
+                </select>
+              </div>
+            </div>
+            <!--- Target State --->
+            <div class="col-md-4 mb-4">
+              <label for="validationCustom01">Login Name </label>
+              <div>
+                <select
+                  class="form-select"
+                  aria-label="Active select"
+                  formControlName="checkLoginName"
+                >
+                  <option [ngValue]="1">True</option>
+                  <option [ngValue]="2">False</option>
+                </select>
+              </div>
+            </div>
+            <!--- Target State --->
+            <div class="col-md-4 mb-4">
+              <label for="validationCustom01">Check SVNR </label>
+              <div>
+                <select
+                  class="form-select"
+                  aria-label="Active select"
+                  formControlName="checkSVNR"
+                >
+                  <option [ngValue]="1">True</option>
+                  <option [ngValue]="2">False</option>
+                </select>
+              </div>
+            </div>
+            <!--- Target State --->
+            <div class="col-md-4 mb-4">
+              <label for="validationCustom01">Check Start Date </label>
+              <div>
+                <select
+                  class="form-select"
+                  aria-label="Active select"
+                  formControlName="checkStartDate"
+                >
+                  <option [ngValue]="1">True</option>
+                  <option [ngValue]="2">False</option>
+                </select>
+              </div>
+            </div>
+            <!--- Target State --->
+            <div class="col-md-4 mb-4">
+              <label for="validationCustom01">Check End Date </label>
+              <div>
+                <select
+                  class="form-select"
+                  aria-label="Active select"
+                  formControlName="checkEndDate"
+                >
+                  <option [ngValue]="1">True</option>
+                  <option [ngValue]="2">False</option>
+                </select>
+              </div>
+            </div>
+            <!--- Target State --->
+            <div class="col-md-4 mb-4">
+              <label for="validationCustom01">Check Password </label>
+              <div>
+                <select
+                  class="form-select"
+                  aria-label="Active select"
+                  formControlName="check_password"
+                >
+                  <option [ngValue]="1">True</option>
+                  <option [ngValue]="2">False</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-success" type="submit" data-dismiss="modal">
+              Close
+            </button>
+            <button
+              id="submitbutton"
+              class="btn btn-primary btn-block"
+              type="submit"
+            >
+              Edit Target Config
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

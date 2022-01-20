@@ -1,6 +1,6 @@
 export interface EmployeeEntity {
   active?: number;
-  department?: number;
+  departmentId?: number;
   employeeid: number;
   end_date?: Date | null;
   firstName?: string;

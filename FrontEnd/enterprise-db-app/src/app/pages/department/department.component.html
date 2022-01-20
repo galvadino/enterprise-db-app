@@ -1,12 +1,25 @@
-<button
-  type="button"
-  class="btn btn-primary"
-  data-toggle="modal"
-  data-target="#exampleModal"
->
-  Add department
-</button>
-
+<div class="container">
+  <div
+    class="p-4 p-md-5 mb-4 text-white rounded bg-dark card-shadow"
+    style="margin-top: 0px"
+  >
+    <h1>Departments</h1>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="text-right">
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          >
+            Add department
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="py-5">
   <div class="container">
     <div class="row">
@@ -61,7 +74,7 @@
       <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
         <div class="modal-body">
           <div class="row">
-         <!--    <div class="form-group col-3">
+            <!--    <div class="form-group col-3">
               <label for="id">id</label>
               <input
                 type="number"
@@ -122,6 +135,7 @@
                 aria-describedby="idHelp"
                 placeholder="Enter id"
                 formControlName="departmentId"
+                readonly
               />
             </div>
             <div class="form-group col-9">

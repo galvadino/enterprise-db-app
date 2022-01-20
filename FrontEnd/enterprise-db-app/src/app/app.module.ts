@@ -11,6 +11,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SingleEmployeeViewComponent } from './pages/single-employee-view/single-employee-view.component';
 import { DepartmentComponent } from './pages/department/department.component';
+import { TargetConfigComponent } from './pages/target-config/target-config.component';
+import { TargetStateComponent } from './pages/target-state/target-state.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { DepartmentComponent } from './pages/department/department.component';
     NotFound404Component,
     SingleEmployeeViewComponent,
     DepartmentComponent,
+    TargetConfigComponent,
+    TargetStateComponent,
   ],
   imports: [
     BrowserModule,

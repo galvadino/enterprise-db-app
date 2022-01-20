@@ -1,3 +1,5 @@
+import { TargetStateComponent } from './pages/target-state/target-state.component';
+import { TargetConfigComponent } from './pages/target-config/target-config.component';
 import { DepartmentComponent } from './pages/department/department.component';
 import { SingleEmployeeViewComponent } from './pages/single-employee-view/single-employee-view.component';
 import { NotFound404Component } from './pages/not-found404/not-found404.component';
@@ -16,9 +18,9 @@ const routes: Routes = [
     children: [
       { path: '', component: HomeComponent },
       { path: 'department', component: DepartmentComponent },
-      { path: 'viewemployee/:id', component: SingleEmployeeViewComponent } /* ,
-      { path: 'viewemployee/:id', component: SingleemployeeViewComponent },
-      { path: 'deleteemployee/:id', component: DeleteemployeeComponent },*/,
+      { path: 'viewemployee/:id', component: SingleEmployeeViewComponent },
+      { path: 'targetconfig', component: TargetConfigComponent },
+      { path: 'targetstate', component: TargetStateComponent },
     ],
   },
   { path: 'login', component: LoginComponent },

@@ -15,39 +15,40 @@
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto mb-2 mb-md-0">
-        <li class="nav-item active">
-          <a class="nav-link" aria-current="page" href="">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="http://localhost:8080/swagger">Swagger</a>
-        </li>
-        <li class="nav-item">
+        <li class="nav-item active" [routerLinkActive]="['']">
           <a
-            class="nav-link disabled"
-            href="#"
+            class="nav-link"
+            aria-current="page"
+            [routerLink]="['']"
+            routerLinkActive="is-active"
+            >Home</a
+          >
+        </li>
+       
+        <li class="nav-item" [routerLinkActive]="['/department']">
+          <a
+            class="nav-link"
             tabindex="-1"
             aria-disabled="true"
-            >Git</a
+            [routerLink]="['/department']"
+            >Department</a
           >
         </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="dropdown01"
-            data-toggle="dropdown"
-            aria-expanded="false"
-            >API</a
+        <li class="nav-item dropdown" [routerLinkActive]="['/targetconfig']">
+          <a class="nav-link" id="dropdown01" [routerLink]="['/targetconfig']"
+            >Target config</a
           >
-          <ul class="dropdown-menu" aria-labelledby="dropdown01">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+        </li>
+        <li class="nav-item dropdown" [routerLinkActive]="['/targetstate']">
+          <a class="nav-link" id="dropdown01" [routerLink]="['/targetstate']"
+            >Target state</a
+          >
         </li>
       </ul>
       <div class="d-flex">
-        <button [routerLink]="['/login']"  class="btn btn-outline-light">Logout</button>
+        <button [routerLink]="['/login']" class="btn btn-outline-light">
+          Logout
+        </button>
       </div>
     </div>
   </div>

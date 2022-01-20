@@ -28,6 +28,22 @@
         >
           Department
         </button>
+        <button
+          style="margin-left: 20px"
+          type="button"
+          class="btn btn-info"
+          [routerLink]="['/targetconfig']"
+        >
+          Targetconfig
+        </button>
+        <button
+          style="margin-left: 20px"
+          type="button"
+          class="btn btn-info"
+          [routerLink]="['/targetstate']"
+        >
+          Targetstate
+        </button>
       </div>
     </div>
   </div>
@@ -39,7 +55,7 @@
         <form class="needs-validation">
           <div class="row">
             <div class="col-md-3 mb-3">
-              <label for="validationCustom01">SVNR</label>
+              <label for="validationCustom01">Social Security Number</label>
               <input
                 type="number"
                 class="form-control"
@@ -49,10 +65,9 @@
                 [ngModelOptions]="{ standalone: true }"
                 required
               />
-              <div class="valid-feedback">Looks good!</div>
             </div>
-            <div class="col-md-3 mb-3">
-              <label for="validationCustom01">firstName</label>
+            <div class="col-md-2 mb-3">
+              <label for="validationCustom01">First name</label>
               <input
                 type="text"
                 class="form-control"
@@ -62,10 +77,21 @@
                 [ngModelOptions]="{ standalone: true }"
                 required
               />
-              <div class="valid-feedback">Looks good!</div>
             </div>
-            <div class="col-md-3 mb-3">
-              <label for="validationCustom02">startDate</label>
+            <div class="col-md-2 mb-3">
+              <label for="validationCustom01">Last name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="validationCustom01"
+                placeholder="First name"
+                [(ngModel)]="addEmployeeObj.lastName"
+                [ngModelOptions]="{ standalone: true }"
+                required
+              />
+            </div>
+            <div class="col-md-2 mb-3">
+              <label for="validationCustom02">Start Date</label>
               <input
                 class="form-control"
                 type="datetime-local"
@@ -73,12 +99,10 @@
                 [ngModelOptions]="{ standalone: true }"
                 id="example-datetime-local-input"
               />
-              <div class="valid-feedback">Looks good!</div>
             </div>
             <div class="col-md-3 mb-3">
-              <label for="validationCustomUsername">endDate</label>
+              <label for="validationCustomUsername">End Date</label>
               <div class="input-group">
-                
                 <input
                   class="form-control"
                   type="datetime-local"
@@ -86,13 +110,12 @@
                   [ngModelOptions]="{ standalone: true }"
                   id="example-datetime-local-input"
                 />
-                <div class="invalid-feedback">Please choose a username.</div>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-3 mb-3">
-              <label for="validationCustom03">loginName</label>
+              <label for="validationCustom03">Login name</label>
               <input
                 type="text"
                 class="form-control"
@@ -102,12 +125,10 @@
                 [ngModelOptions]="{ standalone: true }"
                 required
               />
-              <div class="invalid-feedback">
-                Please provide a valid login name.
-              </div>
+            
             </div>
             <div class="col-md-3 mb-3">
-              <label for="validationCustom04">password</label>
+              <label for="validationCustom04">Password</label>
               <input
                 type="password"
                 class="form-control"
@@ -117,22 +138,19 @@
                 [ngModelOptions]="{ standalone: true }"
                 required
               />
-              <div class="invalid-feedback">
-                Please provide a valid password.
-              </div>
+           
             </div>
             <div class="col-md-3 mb-3">
-              <label for="validationCustom05">department id</label>
+              <label for="validationCustom05">Department ID</label>
               <input
                 type="text"
                 class="form-control"
                 id="validationCustom05"
                 placeholder="Zip"
-                [(ngModel)]="addEmployeeObj.department"
+                [(ngModel)]="addEmployeeObj.departmentId"
                 [ngModelOptions]="{ standalone: true }"
                 required
               />
-              <div class="invalid-feedback">Please provide a valid zip.</div>
             </div>
             <div class="col-md-3 mb-3">
               <label for="validationCustom05">Active</label>
@@ -143,9 +161,8 @@
                 [(ngModel)]="addEmployeeObj.active"
               >
                 <option [ngValue]="1">Active</option>
-                <option [ngValue]="0">InActive</option>
+                <option [ngValue]="2">InActive</option>
               </select>
-              <div class="invalid-feedback">Please provide a valid zip.</div>
             </div>
           </div>
 
@@ -185,7 +202,7 @@
       <td class="text-center">{{ staff.lastName }}</td>
       <td class="text-center">{{ staff.login_name }}</td>
       <td class="text-center">{{ staff.svnr }}</td>
-      <td class="text-center">{{ staff.department }}</td>
+      <td class="text-center">{{ staff.departmentId }}</td>
       <td class="text-center">
         <div *ngIf="staff.active; then thenBlock; else elseBlock"></div>
         <ng-template #thenBlock
@@ -268,7 +285,6 @@
                 [(ngModel)]="editEmployeeObj.firstName"
                 [ngModelOptions]="{ standalone: true }"
               />
-              <div class="valid-feedback">Looks good!</div>
             </div>
             <div class="col-md-3 mb-3">
               <label for="validationCustom01">Department</label>
@@ -278,10 +294,9 @@
                 id="editEmployeeObj.department"
                 placeholder="First name"
                 required
-                [(ngModel)]="editEmployeeObj.department"
+                [(ngModel)]="editEmployeeObj.departmentId"
                 [ngModelOptions]="{ standalone: true }"
               />
-              <div class="valid-feedback">Looks good!</div>
             </div>
             <div class="col-md-3 mb-3">
               <label for="validationCustom02">Start Date</label>
@@ -292,12 +307,10 @@
                 [ngModelOptions]="{ standalone: true }"
                 id="example-datetime-local-input"
               />
-              <div class="valid-feedback">Looks good!</div>
             </div>
             <div class="col-md-3 mb-3">
               <label for="validationCustomUsername">End Date</label>
               <div class="input-group">
-                
                 <input
                   class="form-control"
                   type="datetime-local"
@@ -305,7 +318,6 @@
                   [ngModelOptions]="{ standalone: true }"
                   id="example-datetime-local-input"
                 />
-                <div class="invalid-feedback">Please choose a username.</div>
               </div>
             </div>
           </div>
@@ -321,7 +333,6 @@
                 [ngModelOptions]="{ standalone: true }"
                 required
               />
-              <div class="invalid-feedback">Please provide a valid city.</div>
             </div>
             <div class="col-md-3 mb-3">
               <label for="validationCustom04">Last Name</label>
@@ -334,7 +345,6 @@
                 [ngModelOptions]="{ standalone: true }"
                 required
               />
-              <div class="invalid-feedback">Please provide a valid state.</div>
             </div>
             <div class="col-md-3 mb-3">
               <label for="validationCustom05">Password</label>
@@ -347,9 +357,7 @@
                 [ngModelOptions]="{ standalone: true }"
                 required
               />
-              <div class="invalid-feedback">
-                Please provide a valid password.
-              </div>
+             
             </div>
             <div class="col-md-3 mb-3">
               <label for="validationCustom05">Status</label>
@@ -360,9 +368,8 @@
                 [(ngModel)]="editEmployeeObj.active"
               >
                 <option [ngValue]="1">active</option>
-                <option [ngValue]="0">InActive</option>
+                <option [ngValue]="2">InActive</option>
               </select>
-              <div class="invalid-feedback">Please provide a valid zip.</div>
             </div>
           </div>
           <div class="modal-footer">

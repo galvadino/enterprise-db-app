@@ -26,7 +26,7 @@ export class SingleEmployeeViewComponent implements OnInit {
   getStaffByID(id: any) {
     this.employee.getEmployee(id).subscribe((res) => {
       this.employeeObj = res;
-      this.getDepartmentName(res.department);
+      this.getDepartmentName(res.departmentId);
       console.log(res);
     });
   }

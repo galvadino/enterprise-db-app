@@ -1,0 +1,525 @@
+<div class="">
+  <!--- Target Config --->
+  <div
+    class="p-4 p-md-5 mb-4 text-white rounded bg-dark card-shadow"
+    style="margin-top: 0px"
+  >
+    <h1>Target States</h1>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="text-right">
+          <button
+            type="button"
+            class="btn btn-info"
+            data-toggle="collapse"
+            data-target="#demo"
+          >
+            Add Target State
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--- add Target State --->
+  <div class="row justify-content-md-center" style="margin-bottom: 20px">
+    <div id="demo" class="collapse">
+      <div class="card card-shadow">
+        <div class="card-body">
+          <form
+            class="needs-validation"
+            [formGroup]="addstate"
+            (ngSubmit)="onSubmit()"
+            novalidate
+          >
+            <div class="row justify-content-md-center">
+           <!--  <div class="col-md-2 mb-2">
+                <label for="validationCustom01">State ID</label>
+                <div>
+                  <input
+                    type="number"
+                    id="validationCustom01"
+                    class="form-control"
+                    placeholder="Auto generated"
+                    formControlName="targetstateid"
+                    readonly
+                  />
+                </div>
+              </div>--> 
+              <div class="col-md-2 mb-2">
+                <label for="validationCustom02">Active </label>
+                <div>
+                  <select
+                    class="form-select"
+                    id="validationCustom02"
+                    aria-label="Active select"
+                    formControlName="active"
+                  >
+                    <option [ngValue]="1">True</option>
+                    <option [ngValue]="0">False</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-2 mb-2">
+                <label for="validationCustom03">Target config ID</label>
+                <div>
+                  <input
+                    type="number"
+                    id="validationCustom03"
+                    value="1"
+                    class="form-control"
+                    formControlName="targetconfigid"
+                  />
+                </div>
+              </div>
+
+              <div class="col-md-2 mb-2">
+                <label for="validationCustom04">Department ID </label>
+                <div>
+                  <input
+                    type="number"
+                    id="validationCustom04"
+                    class="form-control"
+                    placeholder="Department ID"
+                    formControlName="departmentid"
+                  />
+                </div>
+              </div>
+              <!--added start-->
+              <div class="col-md-2 mb-2">
+                <label for="validationCustom05">Hostname</label>
+                <div>
+                  <input
+                    type="string"
+                    id="validationCustom05"
+                    class="form-control"
+                    placeholder="Hostname"
+                    formControlName="hostname"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2 mb-2">
+                <label for="validationCustom06">Password</label>
+                <div>
+                  <input
+                    type="password"
+                    id="validationCustom06"
+                    class="form-control"
+                    placeholder="password"
+                    formControlName="password"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2 mb-2">
+                <label for="validationCustom07">Path</label>
+                <div>
+                  <input
+                    type="string"
+                    id="validationCustom07"
+                    class="form-control"
+                    placeholder="path"
+                    formControlName="path"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2 mb-2">
+                <label for="validationCustom08">Port number </label>
+                <div>
+                  <input
+                    type="number"
+                    id="validationCustom08"
+                    class="form-control"
+                    placeholder="Port number"
+                    formControlName="port"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2 mb-2">
+                <label for="validationCustom09">Tablename </label>
+                <div>
+                  <input
+                    type="string"
+                    id="validationCustom09"
+                    class="form-control"
+                    placeholder="tablename"
+                    formControlName="tablename"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2 mb-2">
+                <label for="validationCustom010">Type</label>
+                <div>
+                  <!--  <input
+                    type="string"
+                    id="validationCustom010"
+                    class="form-control"
+                    placeholder="type"
+                    formControlName="type"
+                  />-->
+                  <select
+                    id="validationCustom010"
+                    class="form-select"
+                    aria-label="Active select"
+                    formControlName="type"
+                  >
+                    <option value="MYSQL" selected>MYSQL</option>
+                    <option value="CSV">CSV</option>
+                    <option value="LDAP">LDAP</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-2 mb-2">
+                <label for="validationCustom011">User </label>
+                <div>
+                  <input
+                    type="string"
+                    id="validationCustom011"
+                    class="form-control"
+                    placeholder="user id"
+                    formControlName="user"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2 mb-2">
+                <label for="validationCustom012">Active since </label>
+                <div>
+                  <input
+                    type="datetime-local"
+                    id="validationCustom012"
+                    class="form-control"
+                    placeholder="activesince"
+                    formControlName="activesince"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2 mb-2">
+                <label for="validationCustom013">last synced </label>
+                <div>
+                  <input
+                    type="datetime-local"
+                    id="validationCustom013"
+                    class="form-control"
+                    placeholder="last_synced"
+                    formControlName="last_synced"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2 mb-2">
+                <label for="validationCustom014">last updated</label>
+                <div>
+                  <input
+                    type="datetime-local"
+                    id="validationCustom014"
+                    class="form-control"
+                    placeholder="lastupdated"
+                    formControlName="lastupdated"
+                  />
+                </div>
+              </div>
+              <!--- Target State wnd --->
+              <div
+                class="col-md-2"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <button
+                  class="btn btn-success"
+                  id="submit-add-target-state"
+                  type="submit"
+                  data-toggle="collapse"
+                  data-target="#demo"
+                >
+                  Add Config State
+                </button>
+              </div>
+            </div>
+            <div></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead class="table-light">
+        <tr>
+          <th class="text-center" scope="col">ID</th>
+          <th class="text-center" scope="col">Active state</th>
+          <th class="text-center" scope="col">Target config ID</th>
+          <th class="text-center" scope="col">Last Updated</th>
+          <th class="text-center" scope="col">Active since</th>
+          <th class="text-center" scope="col">Department ID</th>
+
+          <th class="text-center" scope="col">hostname</th>
+          <th class="text-center" scope="col">password</th>
+          <th class="text-center" scope="col">path</th>
+          <th class="text-center" scope="col">port</th>
+          <th class="text-center" scope="col">tablename</th>
+          <th class="text-center" scope="col">type</th>
+          <th class="text-center" scope="col">user</th>
+
+          <th class="text-center" scope="col">Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let targetstate of targetstates; let i = index">
+          <td class="text-center">{{ targetstate.targetstateid }}</td>
+          <td class="text-center">
+            {{ targetstate.active === 1 ? "True" : "False" }}
+          </td>
+          <td class="text-center">{{ targetstate.targetconfigid }}</td>
+          <td class="text-center">{{ targetstate.lastupdated | date }}</td>
+          <td class="text-center">{{ targetstate.activesince }}</td>
+          <td class="text-center">{{ targetstate.departmentid }}</td>
+          <!--- Target Config added--->
+          <td class="text-center">{{ targetstate.hostname }}</td>
+          <td class="text-center">{{ targetstate.password }}</td>
+          <td class="text-center">{{ targetstate.path }}</td>
+          <td class="text-center">{{ targetstate.port }}</td>
+          <td class="text-center">{{ targetstate.tablename }}</td>
+          <td class="text-center">{{ targetstate.type }}</td>
+          <td class="text-center">{{ targetstate.user }}</td>
+          <!--- Target Config added end--->
+
+          <td class="text-center">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-toggle="modal"
+                data-target="#editModal"
+                (click)="editState(targetstate.targetstateid)"
+              >
+                Edit
+              </button>
+              <button
+                type="button"
+                class="btn btn-danger"
+                data-toggle="modal"
+                data-target="#deleteModal"
+                (click)="deletestate(targetstate.targetstateid)"
+              >
+                delete
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Edit -->
+
+<!-- Modal Edit -->
+<div
+  class="modal fade bd-example-modal-lg"
+  id="editModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Change Targit state</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="needs-validation">
+          <div class="row">
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom01">ID</label>
+              <input
+                type="number"
+                class="form-control"
+                id="editEmployeeObj.firstName"
+                placeholder="First name"
+                required
+                [(ngModel)]="targetstatesObj.targetstateid"
+                [ngModelOptions]="{ standalone: true }"
+                readonly
+              />
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom01">active</label>
+              <select
+                class="form-select"
+                aria-label="Active select"
+                [(ngModel)]="targetstatesObj.active"
+              >
+                <option [ngValue]="1" [selected]="targetstatesObj.active == 1">
+                  True
+                </option>
+                <option [ngValue]="0" [selected]="targetstatesObj.active == 0">
+                  False
+                </option>
+              </select>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom02">Target Config ID</label>
+              <input
+                class="form-control"
+                type="number"
+                [(ngModel)]="targetstatesObj.targetconfigid"
+                [ngModelOptions]="{ standalone: true }"
+              />
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustomUsername">Department ID</label>
+              <div class="input-group">
+                <input
+                  class="form-control"
+                  type="number"
+                  [(ngModel)]="targetstatesObj.departmentid"
+                  [ngModelOptions]="{ standalone: true }"
+                  id="example-datetime-local-input"
+                />
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustomUsername">hostname</label>
+              <div class="input-group">
+                <input
+                  class="form-control"
+                  type="text"
+                  [(ngModel)]="targetstatesObj.hostname"
+                  [ngModelOptions]="{ standalone: true }"
+                  id="example-datetime-local-input"
+                />
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustomUsername">password</label>
+              <div class="input-group">
+                <input
+                  class="form-control"
+                  type="password"
+                  [(ngModel)]="targetstatesObj.password"
+                  [ngModelOptions]="{ standalone: true }"
+                  id="example-datetime-local-input"
+                />
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustomUsername">path</label>
+              <div class="input-group">
+                <input
+                  class="form-control"
+                  type="text"
+                  [(ngModel)]="targetstatesObj.path"
+                  [ngModelOptions]="{ standalone: true }"
+                  id="example-datetime-local-input"
+                />
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustomUsername">port</label>
+              <div class="input-group">
+                <input
+                  class="form-control"
+                  type="number"
+                  [(ngModel)]="targetstatesObj.port"
+                  [ngModelOptions]="{ standalone: true }"
+                  id="example-datetime-local-input"
+                />
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustomUsername">tablename</label>
+              <div class="input-group">
+                <input
+                  class="form-control"
+                  type="text"
+                  [(ngModel)]="targetstatesObj.tablename"
+                  [ngModelOptions]="{ standalone: true }"
+                  id="example-datetime-local-input"
+                />
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustomUsername">type</label>
+              <div class="input-group">
+                <input
+                  class="form-control"
+                  type="text"
+                  [(ngModel)]="targetstatesObj.type"
+                  [ngModelOptions]="{ standalone: true }"
+                  id="example-datetime-local-input"
+                />
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustomUsername">user</label>
+              <div class="input-group">
+                <input
+                  class="form-control"
+                  type="text"
+                  [(ngModel)]="targetstatesObj.user"
+                  [ngModelOptions]="{ standalone: true }"
+                  id="example-datetime-local-input"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success" type="submit" data-dismiss="modal">
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-dismiss="modal"
+              (click)="editStaffrequest()"
+            >
+              Save changes
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="deleteModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Confirmation</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">Staff was successfully deleted.</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

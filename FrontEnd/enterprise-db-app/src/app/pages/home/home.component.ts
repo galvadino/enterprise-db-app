@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
 
   editEmployeeObj: EmployeeEntity = {
     active: 0,
-    department: 0,
+    departmentId: 0,
     employeeid: 0,
     end_date: new Date(),
     firstName: '',
@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   };
   addEmployeeObj: EmployeeEntity = {
     active: 0,
-    department: 0,
+    departmentId: 0,
     employeeid: 0,
     end_date: null,
     firstName: '',
@@ -57,9 +57,8 @@ export class HomeComponent implements OnInit {
         console.log(res);
         this.ngOnInit();
       });
+    }
   }
-  
-}
   editEmployee(id: any): any {
     this.employee.getEmployee(id).subscribe((res) => {
       this.editEmployeeObj = res;
@@ -85,7 +84,7 @@ export class HomeComponent implements OnInit {
       console.log(res);
       this.addEmployeeObj = {
         active: 0,
-        department: 0,
+        departmentId: 0,
         employeeid: 0,
         end_date: new Date(),
         firstName: '',
