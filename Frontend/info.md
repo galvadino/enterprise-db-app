@@ -1,1 +1,0 @@
-#allgemeine infos über front end
