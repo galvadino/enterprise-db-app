@@ -204,7 +204,7 @@
       <td class="text-center">{{ staff.svnr }}</td>
       <td class="text-center">{{ staff.departmentId }}</td>
       <td class="text-center">
-        <div *ngIf="staff.active; then thenBlock; else elseBlock"></div>
+        <div *ngIf="staff.active==1; then thenBlock; else elseBlock"></div>
         <ng-template #thenBlock
           ><span class="badge bg-success">Active</span></ng-template
         >

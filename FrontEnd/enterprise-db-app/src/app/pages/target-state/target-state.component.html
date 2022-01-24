@@ -86,8 +86,8 @@
                 </div>
               </div>
               <!--added start-->
-              <div class="col-md-2 mb-2">
-                <label for="validationCustom05">Hostname</label>
+              <div class="col-md-2 mb-2" *ngIf="addstate.value.type != 'CSV' && addstate.value.type != 'JSON'">
+                <label for="validationCustom05" >Hostname</label>
                 <div>
                   <input
                     type="string"
@@ -98,8 +98,8 @@
                   />
                 </div>
               </div>
-              <div class="col-md-2 mb-2">
-                <label for="validationCustom06">Password</label>
+              <div class="col-md-2 mb-2" *ngIf="addstate.value.type != 'CSV' && addstate.value.type != 'JSON'">
+                <label for="validationCustom06" >Password</label>
                 <div>
                   <input
                     type="password"
@@ -122,7 +122,7 @@
                   />
                 </div>
               </div>
-              <div class="col-md-2 mb-2">
+              <div class="col-md-2 mb-2" *ngIf="addstate.value.type != 'CSV' && addstate.value.type != 'JSON' ">
                 <label for="validationCustom08">Port number </label>
                 <div>
                   <input
@@ -134,7 +134,7 @@
                   />
                 </div>
               </div>
-              <div class="col-md-2 mb-2">
+              <div class="col-md-2 mb-2" *ngIf="addstate.value.type != 'CSV' && addstate.value.type != 'JSON' && addstate.value.type != 'LDAP'">
                 <label for="validationCustom09">Tablename </label>
                 <div>
                   <input
@@ -164,11 +164,12 @@
                   >
                     <option value="MYSQL" selected>MYSQL</option>
                     <option value="CSV">CSV</option>
+                    <option value="JSON">JSON</option>
                     <option value="LDAP">LDAP</option>
                   </select>
                 </div>
               </div>
-              <div class="col-md-2 mb-2">
+              <div class="col-md-2 mb-2" *ngIf="addstate.value.type != 'CSV' && addstate.value.type != 'JSON'">
                 <label for="validationCustom011">User </label>
                 <div>
                   <input
@@ -180,7 +181,7 @@
                   />
                 </div>
               </div>
-              <div class="col-md-2 mb-2">
+          <!--  <div class="col-md-2 mb-2">
                 <label for="validationCustom012">Active since </label>
                 <div>
                   <input
@@ -215,7 +216,7 @@
                     formControlName="lastupdated"
                   />
                 </div>
-              </div>
+              </div>-->  
               <!--- Target State wnd --->
               <div
                 class="col-md-2"
@@ -232,7 +233,7 @@
                   data-toggle="collapse"
                   data-target="#demo"
                 >
-                  Add Config State
+                  Add
                 </button>
               </div>
             </div>
@@ -326,7 +327,7 @@
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Change Targit state</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Change Target state</h5>
         <button
           type="button"
           class="close"
