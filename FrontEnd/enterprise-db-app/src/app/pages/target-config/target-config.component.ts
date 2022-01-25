@@ -60,7 +60,7 @@ export class TargetConfigComponent implements OnInit {
       });
   }
   deleteTargetConfig(id: number | undefined): void {
-    if (confirm('Are you sure to delete ' + id)) {
+    if (confirm('Are you sure to delete Config ID ' + id)) {
       this.targetconfig.deleteTargetConfig(id).subscribe(() => {
         this.targetconfigs = this.targetconfigs.filter(
           (t) => t.targetconfig_id !== id
