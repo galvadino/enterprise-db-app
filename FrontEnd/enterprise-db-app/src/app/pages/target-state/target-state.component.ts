@@ -63,7 +63,7 @@ export class TargetStateComponent implements OnInit {
   }
   editStaffrequest(): void {
     //delete this.targetstatesObj.targetstateid;
-
+console.log(this.targetstatesObj)
     this.targetstate
       .patchTargetState(
         this.targetstatesObj.targetstateid,
