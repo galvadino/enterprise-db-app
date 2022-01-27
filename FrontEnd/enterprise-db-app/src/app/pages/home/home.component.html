@@ -4,7 +4,7 @@
 >
   <div class="col-md-6 px-0">
     <h1 class="display-4 font-italic">Enterprise Database Application</h1>
-    <p class="lead my-3">Managing employees and departments.</p>
+    <p class="lead my-3">Managing employees, departments and target systems.</p>
     <p class="lead mb-0">
       <a href="#" class="text-white fw-bold">DKE PR</a>
     </p>
@@ -239,7 +239,7 @@
             data-toggle="modal"
             data-target="#deleteModal"
           >
-            delete
+            Delete
           </button>
         </div>
       </td>
@@ -328,8 +328,20 @@
                 type="text"
                 class="form-control"
                 id="validationCustom03"
-                placeholder="City"
+                placeholder="SVNR"
                 [(ngModel)]="editEmployeeObj.svnr"
+                [ngModelOptions]="{ standalone: true }"
+                required
+              />
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom03">Login Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="validationCustom03"
+                placeholder="Login Name"
+                [(ngModel)]="editEmployeeObj.login_name"
                 [ngModelOptions]="{ standalone: true }"
                 required
               />
@@ -340,7 +352,7 @@
                 type="text"
                 class="form-control"
                 id="validationCustom04"
-                placeholder="State"
+                placeholder="Last Name"
                 [(ngModel)]="editEmployeeObj.lastName"
                 [ngModelOptions]="{ standalone: true }"
                 required
@@ -352,7 +364,7 @@
                 type="password"
                 class="form-control"
                 id="validationCustom05"
-                placeholder="Zip"
+                placeholder="password"
                 [(ngModel)]="editEmployeeObj.password"
                 [ngModelOptions]="{ standalone: true }"
                 required

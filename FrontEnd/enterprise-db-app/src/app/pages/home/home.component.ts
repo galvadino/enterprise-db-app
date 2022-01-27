@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
     login_name: '',
     password: '',
     start_date: new Date(),
-    // svnr: 0,
+    svnr: 0,
   };
   addEmployeeObj: EmployeeEntity = {
     active: 0,
@@ -29,8 +29,8 @@ export class HomeComponent implements OnInit {
     employeeid: 0,
     end_date: null,
     firstName: '',
-    lastName: 'last',
-    login_name: 'login',
+    lastName: '',
+    login_name: '',
     password: '',
     start_date: new Date(),
     svnr: 1234567891,
@@ -66,7 +66,7 @@ export class HomeComponent implements OnInit {
     });
   }
   editStaffrequest(): any {
-    delete this.editEmployeeObj.svnr;
+   // delete this.editEmployeeObj.svnr;
     this.employee
       .patchEmployee(this.editEmployeeObj.employeeid, this.editEmployeeObj)
       .subscribe((res) => {
