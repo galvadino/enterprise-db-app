@@ -74,7 +74,7 @@ export class HomeComponent implements OnInit {
         this.ngOnInit();
       });
     console.log(this.editEmployeeObj);
-    //location.reload();
+    location.reload();
   }
 
   addEmployee() {

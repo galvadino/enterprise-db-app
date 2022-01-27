@@ -249,17 +249,18 @@
         <tr>
           <th class="text-center" scope="col">ID</th>
           <th class="text-center" scope="col">Active state</th>
-          <th class="text-center" scope="col">Target config ID</th>
+          <th class="text-center" scope="col">Type</th>
+          
           <th class="text-center" scope="col">Last Updated</th>
           <th class="text-center" scope="col">Active since</th>
+          <th class="text-center" scope="col">Target config ID</th>
           <th class="text-center" scope="col">Department ID</th>
-
+          <th class="text-center" scope="col">Path</th>
           <th class="text-center" scope="col">Hostname</th>
           <th class="text-center" scope="col">Password</th>
-          <th class="text-center" scope="col">Path</th>
+          
           <th class="text-center" scope="col">Port</th>
           <th class="text-center" scope="col">Tablename</th>
-          <th class="text-center" scope="col">Type</th>
           <th class="text-center" scope="col">User</th>
 
           <th class="text-center" scope="col">Edit</th>
@@ -271,17 +272,17 @@
           <td class="text-center">
             {{ targetstate.active === 1 ? "True" : "False" }}
           </td>
-          <td class="text-center">{{ targetstate.targetconfigid }}</td>
+          <td class="text-center">{{ targetstate.type }}</td>
           <td class="text-center">{{ targetstate.lastupdated | date }}</td>
           <td class="text-center">{{ targetstate.activesince }}</td>
+          <td class="text-center">{{ targetstate.targetconfigid }}</td>
           <td class="text-center">{{ targetstate.departmentid }}</td>
+          <td class="text-center">{{ targetstate.path }}</td>
           <!--- Target Config added--->
           <td class="text-center">{{ targetstate.hostname }}</td>
           <td class="text-center">{{ targetstate.password }}</td>
-          <td class="text-center">{{ targetstate.path }}</td>
           <td class="text-center">{{ targetstate.port }}</td>
           <td class="text-center">{{ targetstate.tablename }}</td>
-          <td class="text-center">{{ targetstate.type }}</td>
           <td class="text-center">{{ targetstate.user }}</td>
           <!--- Target Config added end--->
 

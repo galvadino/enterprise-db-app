@@ -71,6 +71,7 @@ console.log(this.targetstatesObj)
       )
       .subscribe((data) => {
         console.log(this.targetstatesObj);
+        location.reload();
       });
   }
   editState(id: number | undefined): void {
