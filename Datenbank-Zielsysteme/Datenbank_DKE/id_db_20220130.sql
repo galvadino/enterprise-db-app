@@ -58,7 +58,7 @@ CREATE TABLE `departmentid_sequence` (
 
 LOCK TABLES `departmentid_sequence` WRITE;
 /*!40000 ALTER TABLE `departmentid_sequence` DISABLE KEYS */;
-INSERT INTO `departmentid_sequence` VALUES (25),(1);
+INSERT INTO `departmentid_sequence` VALUES (11),(1);
 /*!40000 ALTER TABLE `departmentid_sequence` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -93,7 +93,7 @@ CREATE TABLE `employee` (
 
 LOCK TABLES `employee` WRITE;
 /*!40000 ALTER TABLE `employee` DISABLE KEYS */;
-INSERT INTO `employee` VALUES (1,1,'Mustermann','Max','M.Mustermann','test','2000-07-21',NULL,1,'1234657684','2022-01-30 01:18:08'),(2,1,'Peter','Maier','P.Maier','test','2000-07-21',NULL,1,'1234657685','2022-01-30 01:18:08'),(3,1,'John','Doe','J.Doe','test','2000-07-21',NULL,1,'1234657686','2022-01-30 01:18:08'),(4,1,'Müller','Ralf','R.Mueller','test','1990-01-13',NULL,1,'1234657687','2022-01-30 01:18:08'),(5,1,'Eisenhof','Frank','F.Eisenhof','test','1995-05-31',NULL,1,'1234657688','2022-01-30 01:18:08'),(6,1,'Lupin','Anja','A.Lupin','test','1998-02-17',NULL,1,'1234657690','2022-01-30 01:18:08'),(7,1,'Lempe','Dirk','D.Lempke','test','2017-07-21',NULL,1,'1234657691','2022-01-30 01:18:08'),(8,1,'Müller','Iris','I.Mueller','test','1970-03-15',NULL,1,'1234657692','2022-01-30 01:18:08'),(9,1,'Ludwig','Heinz','L.Heinz','test','1995-02-05',NULL,2,'1234657693','2022-01-30 01:18:08'),(10,1,'Klarfeld','Simone','S.Klarfeld','test','1997-01-31',NULL,2,'1234657694','2022-01-30 01:18:08'),(11,1,'Schmidt','Werner','W.Schmidt','test','1975-03-31',NULL,2,'1234657695','2022-01-30 01:18:08'),(12,1,'Funke','Doris','D.Funke','test','1980-05-01',NULL,2,'1234657696','2022-01-30 01:18:08'),(13,1,'Nolte','Reinhard','R.Nolte','test','2005-01-01','2008-05-07',2,'1234657697','2022-01-30 01:18:08'),(14,1,'Jule','Stefanie','S.Jule','test','1985-04-20',NULL,2,'1234657698','2022-01-30 01:18:08'),(15,1,'Engels','Karl','K.Engels','test','2011-03-08',NULL,3,'1234657699','2022-01-30 01:18:08'),(16,1,'Franke','Elisabeth','E.Franke','test','2010-09-30',NULL,3,'1234657700','2022-01-30 01:18:08'),(17,1,'Petersen','Hans','H.Franke','test','2011-07-31',NULL,3,'1234657701','2022-01-30 01:18:08'),(18,1,'Sebastiansen','Inge','I.Sebastiansen','test','1978-05-22',NULL,3,'1234657702','2022-01-30 01:18:08'),(19,1,'Heier','Peter','P.Heier','test','1996-10-22',NULL,3,'1234657703','2022-01-30 01:18:08'),(20,1,'Steinmacher','Ilse','I.Steinmacher','test','1996-06-19',NULL,3,'1234657704','2022-01-30 01:18:08'),(21,1,'Überall','Georg','G.Ueberall','test','1985-01-31',NULL,3,'1234657705','2022-01-30 01:18:08'),(22,1,'Klein','Bärbel','B.Klein','test','2005-03-31',NULL,3,'1234657706','2022-01-30 01:18:08'),(23,1,'Stein','Rolf','R.Stein','test','1985-02-14',NULL,3,'1234657707','2022-01-30 01:18:08'),(24,1,'Groß','Vera','V.Gross','test','1991-05-01',NULL,3,'1234657708','2022-01-30 01:18:08'),(25,1,'Funke','Andreas','A.Funke','test','1992-04-25',NULL,3,'1234657709','2022-01-30 01:18:08'),(26,1,'Engels','Sabine','S.Engels','test','1978-09-01',NULL,3,'1234657710','2022-01-30 01:18:08'),(27,1,'Paulus','Sebastian','S.Paulus','test','2010-01-31',NULL,3,'1234657711','2022-01-30 01:18:08'),(28,1,'Winscheidt','Elke','E.Windscheidt','test','2000-07-21',NULL,3,'1234657712','2022-01-30 01:18:08'),(29,1,'Blume','Siegmar','S.Blume','test','2000-07-21',NULL,3,'1234657713','2022-01-30 01:18:08'),(30,1,'Mey','Tanja','T.Mey','test','2000-07-21',NULL,4,'1234657714','2022-01-30 01:18:08'),(31,1,'Gelz','Oliver','O.Gelz','test','2000-07-21',NULL,4,'1234657715','2022-01-30 01:18:08'),(32,1,'Lorenz','Tina','T.Lorenz','test','2000-07-21',NULL,4,'1234657716','2022-01-30 01:18:08'),(33,1,'Maier','Tim','T.Maier','test','2000-07-21',NULL,4,'1234657717','2022-01-30 01:18:08'),(34,1,'Winter','Elise','E.Winter','test','2000-07-21',NULL,4,'1234657718','2022-01-30 01:18:08'),(35,1,'Obendorf','Karl','K.Oberndorfer','test','2000-07-21',NULL,4,'1234657719','2022-01-30 01:18:08'),(36,1,'Sommer','Werner','W.Sommer','test','2000-07-21',NULL,4,'1234657720','2022-01-30 01:18:08'),(37,1,'Trost','Elvira','E.Trost','test','2000-07-21',NULL,5,'1234657721','2022-01-30 01:18:08'),(38,1,'Friedrichs','Martin','M.Friedrichs','test','2000-07-21',NULL,5,'1234657722','2022-01-30 01:18:08'),(39,1,'Ludowig','Carmen','C.Ludowig','test','2000-07-21',NULL,5,'1234657723','2022-01-30 01:18:08'),(40,1,'Serenius','Ingo','I.Serenius','test','2000-07-21',NULL,5,'1234657724','2022-01-30 01:18:08'),(41,1,'Mey','Lisa','L.Mey','test','2000-07-21',NULL,5,'1234657725','2022-01-30 01:18:08'),(42,1,'Sonnenfeld','Peter','P.Sonnenfeld','test','2000-07-21',NULL,6,'1234657726','2022-01-30 01:18:08'),(43,1,'Kanis','Herbert','H.Kanis','test','2000-07-21',NULL,6,'1234657727','2022-01-30 01:18:08'),(44,1,'Santus','Cornelia','C.Santus','test','2000-07-21',NULL,6,'1234657728','2022-01-30 01:18:08'),(45,1,'Oberscheidt','Michael','M.Oberscheidt','test','2000-07-21',NULL,6,'1234657729','2022-01-30 01:18:08'),(46,1,'Dorsten','Klaus','K.Dorsten','test','2000-07-21',NULL,6,'1234657730','2022-01-30 01:18:08'),(47,1,'Schneider','Petra','P.Schneider','test','2000-07-21',NULL,6,'1234657731','2022-01-30 01:18:08'),(48,1,'Klein','Thomas','T.Klein','test','2000-07-21','2021-07-21',7,'1234657732','2022-01-30 01:18:08'),(49,1,'Lang','Ute','U.Lang','test','2000-07-21','2022-07-21',7,'1234657733','2022-01-30 01:18:08');
+INSERT INTO `employee` VALUES (1,1,'Mustermann','Maxx','M.Mustermann','098f6bcd4621d373cade4e832627b4f6','2000-07-21',NULL,1,'1234657684','2022-01-30 15:34:14'),(2,1,'Peter','Maier','P.Maier','test','2000-07-21',NULL,1,'1234657685','2022-01-30 15:33:11'),(3,1,'John','Doe','J.Doe','test','2000-07-21',NULL,1,'1234657686','2022-01-30 15:33:11'),(4,1,'Müller','Ralf','R.Mueller','test','1990-01-13',NULL,1,'1234657687','2022-01-30 15:33:11'),(5,1,'Eisenhof','Frank','F.Eisenhof','test','1995-05-31',NULL,1,'1234657688','2022-01-30 15:33:11'),(6,1,'Lupin','Anja','A.Lupin','test','1998-02-17',NULL,1,'1234657690','2022-01-30 15:33:11'),(7,1,'Lempe','Dirk','D.Lempke','test','2017-07-21',NULL,1,'1234657691','2022-01-30 15:33:11'),(8,1,'Müller','Iris','I.Mueller','test','1970-03-15',NULL,1,'1234657692','2022-01-30 15:33:11'),(9,1,'Ludwig','Heinz','L.Heinz','test','1995-02-05',NULL,2,'1234657693','2022-01-30 15:33:11'),(10,1,'Klarfeld','Simone','S.Klarfeld','test','1997-01-31',NULL,2,'1234657694','2022-01-30 15:33:11'),(11,1,'Schmidt','Werner','W.Schmidt','test','1975-03-31',NULL,2,'1234657695','2022-01-30 15:33:11'),(12,1,'Funke','Doris','D.Funke','test','1980-05-01',NULL,2,'1234657696','2022-01-30 15:33:11'),(13,1,'Nolte','Reinhard','R.Nolte','test','2005-01-01','2008-05-07',2,'1234657697','2022-01-30 15:33:11'),(14,1,'Jule','Stefanie','S.Jule','test','1985-04-20',NULL,2,'1234657698','2022-01-30 15:33:11'),(15,1,'Engels','Karl','K.Engels','test','2011-03-08',NULL,3,'1234657699','2022-01-30 15:33:11'),(16,1,'Franke','Elisabeth','E.Franke','test','2010-09-30',NULL,3,'1234657700','2022-01-30 15:33:11'),(17,1,'Petersen','Hans','H.Franke','test','2011-07-31',NULL,3,'1234657701','2022-01-30 15:33:11'),(18,1,'Sebastiansen','Inge','I.Sebastiansen','test','1978-05-22',NULL,3,'1234657702','2022-01-30 15:33:11'),(19,1,'Heier','Peter','P.Heier','test','1996-10-22',NULL,3,'1234657703','2022-01-30 15:33:11'),(20,1,'Steinmacher','Ilse','I.Steinmacher','test','1996-06-19',NULL,3,'1234657704','2022-01-30 15:33:11'),(21,1,'Überall','Georg','G.Ueberall','test','1985-01-31',NULL,3,'1234657705','2022-01-30 15:33:11'),(22,1,'Klein','Bärbel','B.Klein','test','2005-03-31',NULL,3,'1234657706','2022-01-30 15:33:11'),(23,1,'Stein','Rolf','R.Stein','test','1985-02-14',NULL,3,'1234657707','2022-01-30 15:33:11'),(24,1,'Groß','Vera','V.Gross','test','1991-05-01',NULL,3,'1234657708','2022-01-30 15:33:11'),(25,1,'Funke','Andreas','A.Funke','test','1992-04-25',NULL,3,'1234657709','2022-01-30 15:33:11'),(26,1,'Engels','Sabine','S.Engels','test','1978-09-01',NULL,3,'1234657710','2022-01-30 15:33:11'),(27,1,'Paulus','Sebastian','S.Paulus','test','2010-01-31',NULL,3,'1234657711','2022-01-30 15:33:11'),(28,1,'Winscheidt','Elke','E.Windscheidt','test','2000-07-21',NULL,3,'1234657712','2022-01-30 15:33:11'),(29,1,'Blume','Siegmar','S.Blume','test','2000-07-21',NULL,3,'1234657713','2022-01-30 15:33:11'),(30,1,'Mey','Tanja','T.Mey','test','2000-07-21',NULL,4,'1234657714','2022-01-30 15:33:11'),(31,1,'Gelz','Oliver','O.Gelz','test','2000-07-21',NULL,4,'1234657715','2022-01-30 15:33:11'),(32,1,'Lorenz','Tina','T.Lorenz','test','2000-07-21',NULL,4,'1234657716','2022-01-30 15:33:11'),(33,1,'Maier','Tim','T.Maier','test','2000-07-21',NULL,4,'1234657717','2022-01-30 15:33:11'),(34,1,'Winter','Elise','E.Winter','test','2000-07-21',NULL,4,'1234657718','2022-01-30 15:33:11'),(35,1,'Obendorf','Karl','K.Oberndorfer','test','2000-07-21',NULL,4,'1234657719','2022-01-30 15:33:11'),(36,1,'Sommer','Werner','W.Sommer','test','2000-07-21',NULL,4,'1234657720','2022-01-30 15:33:11'),(37,1,'Trost','Elvira','E.Trost','test','2000-07-21',NULL,5,'1234657721','2022-01-30 15:33:11'),(38,1,'Friedrichs','Martin','M.Friedrichs','test','2000-07-21',NULL,5,'1234657722','2022-01-30 15:33:11'),(39,1,'Ludowig','Carmen','C.Ludowig','test','2000-07-21',NULL,5,'1234657723','2022-01-30 15:33:11'),(40,1,'Serenius','Ingo','I.Serenius','test','2000-07-21',NULL,5,'1234657724','2022-01-30 15:33:11'),(41,1,'Mey','Lisa','L.Mey','test','2000-07-21',NULL,5,'1234657725','2022-01-30 15:33:11'),(42,1,'Sonnenfeld','Peter','P.Sonnenfeld','test','2000-07-21',NULL,6,'1234657726','2022-01-30 15:33:11'),(43,1,'Kanis','Herbert','H.Kanis','test','2000-07-21',NULL,6,'1234657727','2022-01-30 15:33:11'),(44,1,'Santus','Cornelia','C.Santus','test','2000-07-21',NULL,6,'1234657728','2022-01-30 15:33:11'),(45,1,'Oberscheidt','Michael','M.Oberscheidt','test','2000-07-21',NULL,6,'1234657729','2022-01-30 15:33:11'),(46,1,'Dorsten','Klaus','K.Dorsten','test','2000-07-21',NULL,6,'1234657730','2022-01-30 15:33:11'),(47,1,'Schneider','Petra','P.Schneider','test','2000-07-21',NULL,6,'1234657731','2022-01-30 15:33:11'),(48,1,'Klein','Thomas','T.Klein','test','2000-07-21','2021-07-21',7,'1234657732','2022-01-30 15:33:11'),(49,1,'Lang','Ute','U.Lang','test','2000-07-21','2022-07-21',7,'1234657733','2022-01-30 15:33:11');
 /*!40000 ALTER TABLE `employee` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -115,7 +115,7 @@ CREATE TABLE `employeeid_sequence` (
 
 LOCK TABLES `employeeid_sequence` WRITE;
 /*!40000 ALTER TABLE `employeeid_sequence` DISABLE KEYS */;
-INSERT INTO `employeeid_sequence` VALUES (55),(1),(1);
+INSERT INTO `employeeid_sequence` VALUES (51),(1),(1);
 /*!40000 ALTER TABLE `employeeid_sequence` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -305,7 +305,7 @@ CREATE TABLE `targetid_sequence` (
 
 LOCK TABLES `targetid_sequence` WRITE;
 /*!40000 ALTER TABLE `targetid_sequence` DISABLE KEYS */;
-INSERT INTO `targetid_sequence` VALUES (93),(1);
+INSERT INTO `targetid_sequence` VALUES (10),(1);
 /*!40000 ALTER TABLE `targetid_sequence` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -345,7 +345,7 @@ CREATE TABLE `targetstate` (
 
 LOCK TABLES `targetstate` WRITE;
 /*!40000 ALTER TABLE `targetstate` DISABLE KEYS */;
-INSERT INTO `targetstate` VALUES (1,1,7,'2022-01-30 01:18:20',NULL,1,'MYSQL','3306','/mysqltarget','root','root','localhost','targetemployee',NULL),(2,1,1,'2022-01-30 01:45:09',NULL,1,'CSV','','C:/Users/d.breimaier/Desktop/DKE_Zielsysteme/1-Marketing/CSV/','','','','',NULL),(3,1,1,'2022-01-30 01:45:13',NULL,1,'JSON','','C:/Users/d.breimaier/Desktop/DKE_Zielsysteme/1-Marketing/JSON/','','','','',NULL),(4,1,1,'2022-01-30 01:45:09',NULL,2,'CSV','','C:/Users/d.breimaier/Desktop/DKE_Zielsysteme/2-Finance/CSV/','','','','',NULL),(5,1,1,'2022-01-30 01:45:13',NULL,2,'JSON','','C:/Users/d.breimaier/Desktop/DKE_Zielsysteme/2-Finance/JSON/','','','','',NULL),(6,1,1,'2022-01-30 01:45:09',NULL,5,'CSV','','C:/Users/d.breimaier/Desktop/DKE_Zielsysteme/5-Sales/CSV/','','','','',NULL),(7,1,1,'2022-01-30 01:45:13',NULL,5,'JSON','','C:/Users/d.breimaier/Desktop/DKE_Zielsysteme/5-Sales/JSON/','','','','',NULL),(8,1,1,'2022-01-30 01:45:09',NULL,3,'CSV','','C:/Users/d.breimaier/Desktop/DKE_Zielsysteme/3-Human Resources/CSV/','','','','',NULL),(9,1,1,'2022-01-30 01:45:13',NULL,3,'JSON','','C:/Users/d.breimaier/Desktop/DKE_Zielsysteme/3-Human Resources/JSON/','','','','',NULL),(10,1,8,'2022-01-30 01:18:20',NULL,7,'MYSQL','3306','/mysqltarget','root','root','localhost','targetemployee2',NULL),(11,1,1,NULL,NULL,7,'LDAP','389','ou=People,dc=dkePr,dc=at','cn=Manager,dc=dkePr,dc=at','secret','localhost','',NULL);
+INSERT INTO `targetstate` VALUES (1,1,7,NULL,NULL,1,'MYSQL','3306','/mysqltarget','root','root','localhost','targetemployee',NULL),(2,1,1,'2022-01-30 15:35:40',NULL,1,'CSV','','C:/Users/d.breimaier/Desktop/DKE_Zielsysteme/1-Marketing/CSV/','','','','',NULL),(3,1,1,'2022-01-30 15:35:41',NULL,1,'JSON','','C:/Users/d.breimaier/Desktop/DKE_Zielsysteme/1-Marketing/JSON/','','','','',NULL),(4,1,1,'2022-01-30 15:35:40',NULL,2,'CSV','','C:/Users/d.breimaier/Desktop/DKE_Zielsysteme/2-Finance/CSV/','','','','',NULL),(5,1,1,'2022-01-30 15:35:41',NULL,2,'JSON','','C:/Users/d.breimaier/Desktop/DKE_Zielsysteme/2-Finance/JSON/','','','','',NULL),(6,1,1,'2022-01-30 15:35:40',NULL,5,'CSV','','C:/Users/d.breimaier/Desktop/DKE_Zielsysteme/5-Sales/CSV/','','','','',NULL),(7,1,1,'2022-01-30 15:35:41',NULL,5,'JSON','','C:/Users/d.breimaier/Desktop/DKE_Zielsysteme/5-Sales/JSON/','','','','',NULL),(8,1,1,'2022-01-30 15:35:40',NULL,3,'CSV','','C:/Users/d.breimaier/Desktop/DKE_Zielsysteme/3-Human Resources/CSV/','','','','',NULL),(9,1,1,'2022-01-30 15:35:41',NULL,3,'JSON','','C:/Users/d.breimaier/Desktop/DKE_Zielsysteme/3-Human Resources/JSON/','','','','',NULL),(10,1,8,NULL,NULL,7,'MYSQL','3306','/mysqltarget','root','root','localhost','targetemployee2',NULL),(11,1,1,NULL,NULL,7,'LDAP','389','ou=People,dc=dkePr,dc=at','cn=Manager,dc=dkePr,dc=at','secret','localhost','',NULL);
 /*!40000 ALTER TABLE `targetstate` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -367,7 +367,7 @@ CREATE TABLE `targetstateid_sequence` (
 
 LOCK TABLES `targetstateid_sequence` WRITE;
 /*!40000 ALTER TABLE `targetstateid_sequence` DISABLE KEYS */;
-INSERT INTO `targetstateid_sequence` VALUES (200),(1);
+INSERT INTO `targetstateid_sequence` VALUES (14),(1);
 /*!40000 ALTER TABLE `targetstateid_sequence` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -387,7 +387,7 @@ DELIMITER ;;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;;
 /*!50003 SET @saved_time_zone      = @@time_zone */ ;;
 /*!50003 SET time_zone             = 'SYSTEM' */ ;;
-/*!50106 CREATE*/ /*!50117 DEFINER=`root`@`localhost`*/ /*!50106 EVENT `autom_export_CSV` ON SCHEDULE EVERY 5 MINUTE STARTS '2022-01-30 01:50:09' ON COMPLETION NOT PRESERVE ENABLE DO CALL `central_db_t3`.`exportToCSV`() */ ;;
+/*!50106 CREATE*/ /*!50117 DEFINER=`root`@`localhost`*/ /*!50106 EVENT `autom_export_CSV` ON SCHEDULE EVERY 1 MINUTE STARTS '2022-01-30 16:33:40' ON COMPLETION NOT PRESERVE ENABLE DO CALL `central_db_t3`.`exportToCSV`() */ ;;
 /*!50003 SET time_zone             = @saved_time_zone */ ;;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;;
@@ -405,7 +405,7 @@ DELIMITER ;;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;;
 /*!50003 SET @saved_time_zone      = @@time_zone */ ;;
 /*!50003 SET time_zone             = 'SYSTEM' */ ;;
-/*!50106 CREATE*/ /*!50117 DEFINER=`root`@`localhost`*/ /*!50106 EVENT `autom_export_JSON` ON SCHEDULE EVERY 5 MINUTE STARTS '2022-01-30 01:50:13' ON COMPLETION NOT PRESERVE ENABLE DO CALL `central_db_t3`.`exportToJSON`() */ ;;
+/*!50106 CREATE*/ /*!50117 DEFINER=`root`@`localhost`*/ /*!50106 EVENT `autom_export_JSON` ON SCHEDULE EVERY 1 MINUTE STARTS '2022-01-30 16:33:41' ON COMPLETION NOT PRESERVE ENABLE DO CALL `central_db_t3`.`exportToJSON`() */ ;;
 /*!50003 SET time_zone             = @saved_time_zone */ ;;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;;
@@ -570,13 +570,13 @@ BEGIN
     DECLARE check_password tinyint;
     DECLARE check_start_date tinyint;
     DECLARE check_end_date tinyint;
-    DECLARE departmentid INTEGER;
+    DECLARE department_id INTEGER;
     DECLARE last_synced datetime;
     DECLARE targetstateid INTEGER;
 
 
 	-- declare cursor for targetconfig and targetstate
-	DEClARE cur_list 
+	DECLARE cur_list 
 		CURSOR FOR 
 			select 	tc.check_employeeid, 
 					tc.check_SVNR, 
@@ -587,6 +587,7 @@ BEGIN
 					tc.check_start_date, 
 					tc.check_end_date,
 					ts.department_id,
+                    ts.last_synced,
 					ts.path,
                     ts.targetstate_id
 		from targetconfig tc
@@ -610,7 +611,8 @@ BEGIN
                 check_password, 
                 check_start_date, 
                 check_end_date, 
-                departmentid, 
+                department_id,
+                last_synced,
                 json_path,
                 targetstateid;
 		IF finished = 1 THEN 
@@ -623,24 +625,24 @@ BEGIN
 		CREATE TEMPORARY TABLE tmp_exportJSON 
 					SELECT 
                       CONCAT("[",
-					GROUP_CONCAT(
+                      GROUP_CONCAT(
 						CASE WHEN check_employeeid = 1 THEN CONCAT("{employeeid:'",e.employeeid,"'") ELSE '' END,
 						CASE WHEN check_SVNR = 1 THEN CONCAT("svnr:'",e.SVNR,"'") ELSE '' END,
-                        CASE WHEN check_first_name = 1 THEN CONCAT("first_name:'",e.first_name,"'") ELSE '' END,
+                        CASE WHEN (check_first_name AND e.first_name IS NOT NULL) = 1 THEN CONCAT("first_name:'",e.first_name,"'") ELSE '' END,
                         CASE WHEN check_last_name = 1 THEN  CONCAT("last_name:'",e.last_name,"'") ELSE '' END,
                         CASE WHEN check_login_name = 1 THEN CONCAT("login_name:'",e.login_name,"'") ELSE '' END,
                         CASE WHEN check_password = 1 THEN CONCAT("password:'",e.password,"'") ELSE '' END,
-                        CASE WHEN check_start_date = 1 THEN CONCAT("start_date:'",DATE_FORMAT(e.start_date, '%Y-%m-%d'),"'") ELSE '' END,
+						CASE WHEN check_start_date = 1 THEN CONCAT("start_date:'",DATE_FORMAT(e.start_date, '%Y-%m-%d'),"'") ELSE '' END,
                         CASE WHEN (check_end_date = 1 AND e.end_date IS NOT NULL) THEN CONCAT("end_date:'",DATE_FORMAT(e.end_date, '%Y-%m-%d'),"'") ELSE '' END,
-                        CONCAT(",departmentid:'",departmentid,"'}")
+                        CONCAT(",departmentid:'",department_id,"'}")
                         )
 					,"]") 
 					AS JSON FROM employee e
-					WHERE e.department_id = departmentid and e.active = 1 and (last_synced < e.last_changed or last_synced is null)
+					WHERE e.department_id = department_id and e.active = 1 and (last_synced < e.last_changed or last_synced is null)
 					ORDER BY e.employeeid ASC;
-    
-		-- export to CSV
-     	SET @DEPARTMENTID = departmentid;
+       
+		-- export to JSON
+     	SET @DEPARTMENTID = department_id;
         SET @FOLDER = json_path;
         SET @TIMESTAMP = DATE_FORMAT(NOW(), '%Y%m%d%H%i%s');
 		SET @FULLPATH := CONCAT(@FOLDER, 'employees_',@DEPARTMENTID,'_',@TIMESTAMP,'_.json');
@@ -649,8 +651,9 @@ BEGIN
         "' FIELDS TERMINATED BY ';'
         OPTIONALLY ENCLOSED BY '\"'
 		FROM tmp_exportJSON");
+        
 
-		IF (EXISTS (SELECT 1 FROM tmp_exportJSON)) THEN
+		IF (SELECT COUNT(*) FROM tmp_exportJSON where JSON is not null != 0) THEN
         BEGIN
 			PREPARE S1 FROM @Q1;
 			EXECUTE S1;
@@ -667,75 +670,10 @@ BEGIN
        END;
          
 	END IF;
-	        
+        
 	END LOOP getJSONPath;
+    
 	CLOSE cur_list;
-
-
-END ;;
-DELIMITER ;
-/*!50003 SET sql_mode              = @saved_sql_mode */ ;
-/*!50003 SET character_set_client  = @saved_cs_client */ ;
-/*!50003 SET character_set_results = @saved_cs_results */ ;
-/*!50003 SET collation_connection  = @saved_col_connection */ ;
-/*!50003 DROP PROCEDURE IF EXISTS `exportToMySQL` */;
-/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
-/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
-/*!50003 SET @saved_col_connection = @@collation_connection */ ;
-/*!50003 SET character_set_client  = utf8mb4 */ ;
-/*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
-/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO' */ ;
-DELIMITER ;;
-CREATE DEFINER=`DKETeam`@`%` PROCEDURE `exportToMySQL`()
-BEGIN
-
-	DECLARE finished INTEGER DEFAULT 0;
-	DECLARE mysql_path varchar(100) DEFAULT "";
-    DECLARE currentDatabase varchar(100) default "SELECT DATABASE()";
-
-	-- declare cursor for employee
-	DEClARE curPath 
-		CURSOR FOR 
-			SELECT path FROM targetconfig WHERE type = "mysql";
-
-	-- declare NOT FOUND handler
-	DECLARE CONTINUE HANDLER 
-        FOR NOT FOUND SET finished = 1;
-
-	OPEN curPath;
-
-	getmysql_path: LOOP
-		FETCH curPath INTO mysql_path;
-		IF finished = 1 THEN 
-			LEAVE getmysql_path;
-		END IF;
-        
-        -- DELETE FROM cmdlines;
-        
-        DROP TEMPORARY TABLE IF EXISTS tmp_exportmysql; 
-		CREATE TEMPORARY TABLE tmp_exportmysql SELECT employeeid, first_name, last_name, login_name FROM employee ORDER BY last_name DESC;
-		
-        SET @DATABASE = database();
-        SET @USER ='root';
-        SET @PW ='';
-		SET @FOLDER = mysql_path;
-        SET @TIMESTAMP = DATE_FORMAT(NOW(), '%Y%m%d%H%i%s');
-		SET @FULLPATH := CONCAT(@FOLDER, 'employees_',@TIMESTAMP,'.sql');
-
-		SET @COMMAND := CONCAT('\\\\! mysqldump --column-statistics=0 --user ',@USER,' -p',@PW,' ',@DATABASE,' employee > ',@FULLPATH);
-
-		-- INSERT 
-		SET @INSERT := CONCAT("INSERT INTO cmdlines VALUES ('", @COMMAND, "' , '" , @TIMESTAMP, "' , '0');"); 
-        
-		PREPARE S1 FROM @INSERT;
-		EXECUTE S1;
-		DEALLOCATE PREPARE S1;
-
-        
-	END LOOP getmysql_path;
-	CLOSE curPath;
 
 
 END ;;
@@ -782,7 +720,6 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `insert_test_departments`()
 BEGIN
 
 delete from central_db_t3.department;
-
 insert into  central_db_t3.department
 values  (1, "Marketing"),
 		(2, "Finance"),
@@ -793,6 +730,8 @@ values  (1, "Marketing"),
         (7, "Manufacturing"),
         (8, "Quality Management"),
         (9, "Product Management");
+        
+  update departmentid_sequence set next_val = 10 where next_val=25;     
         
 END ;;
 DELIMITER ;
@@ -864,6 +803,8 @@ insert into central_db_t3.employee  (employeeid, active, last_name, first_name, 
 	(47, 1,'Schneider','Petra',"P.Schneider", "test", '2000.07.21', null ,6, 1234657731),
 	(48, 1,'Klein','Thomas',"T.Klein", "test", '2000.07.21', '2021.07.21' ,7, 1234657732),
 	(49, 1,'Lang','Ute',"U.Lang", "test", '2000.07.21', '2022.07.21' ,7, 1234657733);
+    
+    update employeeid_sequence set next_val = 50 where next_val=56;     
 
 END ;;
 DELIMITER ;
@@ -895,6 +836,8 @@ values (1, 1, 1, 1, 1, 1, 1, 1, 1, "alle Mitarbeiterdaten"),
        (6, 1, 1, 1, 2, 2, 1, 1, 1, "alle Mitarbeiterdaten ohne Login und Passwort"),
        (7, 1, 1, 1, 1, 1, 1, 1, 2, "alle Mitarbeiterdaten ohne SVNR"),
        (8, 1, 1, 1, 2, 2, 2, 2, 2, "nur MitarbeiteriD, Vor- und Nachname");
+       
+       update targetid_sequence set next_val='9' where next_val='93';
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -927,6 +870,8 @@ insert into central_db_t3.targetstate  (targetstate_id, active, targetconfig_id,
 (9, 1, 1, 3, "JSON","", "C:/Users/d.breimaier/Desktop/DKE_Zielsysteme/3-Human Resources/JSON/", "", "", "", ""),
 (10, 1, 8, 7, "MYSQL", 3306, "/mysqltarget", "root", "root", "localhost", "targetemployee2"),
 (11, 1, 1, 7, "LDAP", 389, "ou=People,dc=dkePr,dc=at", "cn=Manager,dc=dkePr,dc=at", "secret", "localhost", "");
+
+update targetstateid_sequence set next_val='12' where next_val='200';
 	   
 
 END ;;
@@ -945,4 +890,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-30  2:45:28
+-- Dump completed on 2022-01-30 16:36:07
