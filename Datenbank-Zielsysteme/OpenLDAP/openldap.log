@@ -1,0 +1,356 @@
+61ec714b OpenLDAP 2.4.49 Standalone LDAP Server (slapd)daemon_init: listen on ldaps:///
+61ec714b daemon_init: listen on ldap:///
+61ec714b daemon_init: 2 listeners to open...
+ldap_url_parse_ext(ldaps:///)
+61ec714b daemon: listener initialized ldaps:///
+ldap_url_parse_ext(ldap:///)
+61ec714b daemon: listener initialized ldap:///
+61ec714b daemon_init: 4 listeners opened
+ldap_create
+61ec714b slapd init: initiated server.
+61ec714b slap_sasl_init: initialized!
+61ec714b bdb_back_initialize: initialize BDB backend
+61ec714b bdb_back_initialize: Berkeley DB 5.3.21: (May 11, 2012)
+61ec714b ==>sql_back_initialize()
+61ec714b <==sql_back_initialize()
+61ec714b mdb_back_initialize: initialize MDB backend
+61ec714b mdb_back_initialize: LMDB 0.9.25: (January 30, 2020)
+61ec714b ==> translucent_initialize
+61ec714b mdb_db_init: Initializing mdb database
+61ec714b >>> dnPrettyNormal: <dc=dkePr,dc=at>
+61ec714b <<< dnPrettyNormal: <dc=dkePr,dc=at>, <dc=dkepr,dc=at>
+61ec714b >>> dnPrettyNormal: <cn=Manager,dc=dkePr,dc=at>
+61ec714b <<< dnPrettyNormal: <cn=Manager,dc=dkePr,dc=at>, <cn=manager,dc=dkepr,dc=at>
+61ec714b >>> dnNormalize: <cn=Subschema>
+61ec714b <<< dnNormalize: <cn=subschema>
+61ec714b matching_rule_use_init
+61ec714b     1.2.840.113556.1.4.804 (integerBitOrMatch): matchingRuleUse: ( 1.2.840.113556.1.4.804 NAME 'integerBitOrMatch' APPLIES ( supportedLDAPVersion $ entryTtl $ uidNumber $ gidNumber $ olcConcurrency $ olcConnMaxPending $ olcConnMaxPendingAuth $ olcIdleTimeout $ olcIndexSubstrIfMinLen $ olcIndexSubstrIfMaxLen $ olcIndexSubstrAnyLen $ olcIndexSubstrAnyStep $ olcIndexIntLen $ olcListenerThreads $ olcLocalSSF $ olcMaxDerefDepth $ olcReplicationInterval $ olcSockbufMaxIncoming $ olcSockbufMaxIncomingAuth $ olcThreads $ olcToolThreads $ olcWriteTimeout $ olcDbCacheFree $ olcDbCacheSize $ olcDbDNcacheSize $ olcDbIDLcacheSize $ olcDbSearchStack $ olcDbShmKey $ olcDbProtocolVersion $ olcDbConnectionPoolMax $ olcChainMaxReferralDepth $ olcDbMaxReaders $ olcDbMaxSize $ olcDbRtxnSize $ olcSpSessionlog $ olcSssVlvMax $ olcSssVlvMaxKeys $ olcSssVlvMaxPerConn $ olcPcacheMaxQueries $ olcRetcodeSleep $ olcDDSmaxDynamicObjects $ mailPreferenceOption $ shadowLastChange $ shadowMin $ shadowMax $ shadowWarning $ shadowInactive $ shadowExpire $ shadowFlag $ ipServicePort $ ipProtocolNumber $ oncRpcNumber ) )
+61ec714b     1.2.840.113556.1.4.803 (integerBitAndMatch): matchingRuleUse: ( 1.2.840.113556.1.4.803 NAME 'integerBitAndMatch' APPLIES ( supportedLDAPVersion $ entryTtl $ uidNumber $ gidNumber $ olcConcurrency $ olcConnMaxPending $ olcConnMaxPendingAuth $ olcIdleTimeout $ olcIndexSubstrIfMinLen $ olcIndexSubstrIfMaxLen $ olcIndexSubstrAnyLen $ olcIndexSubstrAnyStep $ olcIndexIntLen $ olcListenerThreads $ olcLocalSSF $ olcMaxDerefDepth $ olcReplicationInterval $ olcSockbufMaxIncoming $ olcSockbufMaxIncomingAuth $ olcThreads $ olcToolThreads $ olcWriteTimeout $ olcDbCacheFree $ olcDbCacheSize $ olcDbDNcacheSize $ olcDbIDLcacheSize $ olcDbSearchStack $ olcDbShmKey $ olcDbProtocolVersion $ olcDbConnectionPoolMax $ olcChainMaxReferralDepth $ olcDbMaxReaders $ olcDbMaxSize $ olcDbRtxnSize $ olcSpSessionlog $ olcSssVlvMax $ olcSssVlvMaxKeys $ olcSssVlvMaxPerConn $ olcPcacheMaxQueries $ olcRetcodeSleep $ olcDDSmaxDynamicObjects $ mailPreferenceOption $ shadowLastChange $ shadowMin $ shadowMax $ shadowWarning $ shadowInactive $ shadowExpire $ shadowFlag $ ipServicePort $ ipProtocolNumber $ oncRpcNumber ) )
+61ec714b     1.3.6.1.4.1.1466.109.114.2 (caseIgnoreIA5Match): matchingRuleUse: ( 1.3.6.1.4.1.1466.109.114.2 NAME 'caseIgnoreIA5Match' APPLIES ( altServer $ olcDbConfig $ c $ mail $ dc $ associatedDomain $ email $ aRecord $ mDRecord $ mXRecord $ nSRecord $ sOARecord $ cNAMERecord $ janetMailbox $ gecos $ homeDirectory $ loginShell $ memberUid $ memberNisNetgroup $ ipHostNumber $ ipNetworkNumber $ ipNetmaskNumber $ macAddress $ bootFile $ nisMapEntry ) )
+61ec714b     1.3.6.1.4.1.1466.109.114.1 (caseExactIA5Match): matchingRuleUse: ( 1.3.6.1.4.1.1466.109.114.1 NAME 'caseExactIA5Match' APPLIES ( altServer $ olcDbConfig $ c $ mail $ dc $ associatedDomain $ email $ aRecord $ mDRecord $ mXRecord $ nSRecord $ sOARecord $ cNAMERecord $ janetMailbox $ gecos $ homeDirectory $ loginShell $ memberUid $ memberNisNetgroup $ ipHostNumber $ ipNetworkNumber $ ipNetmaskNumber $ macAddress $ bootFile $ nisMapEntry ) )
+61ec714b     2.5.13.39 (certificateListMatch):     2.5.13.38 (certificateListExactMatch): matchingRuleUse: ( 2.5.13.38 NAME 'certificateListExactMatch' APPLIES ( authorityRevocationList $ certificateRevocationList $ deltaRevocationList ) )
+61ec714b     2.5.13.35 (certificateMatch):     2.5.13.34 (certificateExactMatch): matchingRuleUse: ( 2.5.13.34 NAME 'certificateExactMatch' APPLIES ( userCertificate $ cACertificate ) )
+61ec714b     2.5.13.30 (objectIdentifierFirstComponentMatch): matchingRuleUse: ( 2.5.13.30 NAME 'objectIdentifierFirstComponentMatch' APPLIES ( supportedControl $ supportedExtension $ supportedFeatures $ ldapSyntaxes $ supportedApplicationContext ) )
+61ec714b     2.5.13.29 (integerFirstComponentMatch): matchingRuleUse: ( 2.5.13.29 NAME 'integerFirstComponentMatch' APPLIES ( supportedLDAPVersion $ entryTtl $ uidNumber $ gidNumber $ olcConcurrency $ olcConnMaxPending $ olcConnMaxPendingAuth $ olcIdleTimeout $ olcIndexSubstrIfMinLen $ olcIndexSubstrIfMaxLen $ olcIndexSubstrAnyLen $ olcIndexSubstrAnyStep $ olcIndexIntLen $ olcListenerThreads $ olcLocalSSF $ olcMaxDerefDepth $ olcReplicationInterval $ olcSockbufMaxIncoming $ olcSockbufMaxIncomingAuth $ olcThreads $ olcToolThreads $ olcWriteTimeout $ olcDbCacheFree $ olcDbCacheSize $ olcDbDNcacheSize $ olcDbIDLcacheSize $ olcDbSearchStack $ olcDbShmKey $ olcDbProtocolVersion $ olcDbConnectionPoolMax $ olcChainMaxReferralDepth $ olcDbMaxReaders $ olcDbMaxSize $ olcDbRtxnSize $ olcSpSessionlog $ olcSssVlvMax $ olcSssVlvMaxKeys $ olcSssVlvMaxPerConn $ olcPcacheMaxQueries $ olcRetcodeSleep $ olcDDSmaxDynamicObjects $ mailPreferenceOption $ shadowLastChange $ shadowMin $ shadowMax $ shadowWarning $ shadowInactive $ shadowExpire $ shadowFlag $ ipServicePort $ ipProtocolNumber $ oncRpcNumber ) )
+61ec714b     2.5.13.28 (generalizedTimeOrderingMatch): matchingRuleUse: ( 2.5.13.28 NAME 'generalizedTimeOrderingMatch' APPLIES ( createTimestamp $ modifyTimestamp $ pwdChangedTime $ pwdAccountLockedTime $ pwdFailureTime $ pwdGraceUseTime ) )
+61ec714b     2.5.13.27 (generalizedTimeMatch): matchingRuleUse: ( 2.5.13.27 NAME 'generalizedTimeMatch' APPLIES ( createTimestamp $ modifyTimestamp $ pwdChangedTime $ pwdAccountLockedTime $ pwdFailureTime $ pwdGraceUseTime ) )
+61ec714b     2.5.13.24 (protocolInformationMatch): matchingRuleUse: ( 2.5.13.24 NAME 'protocolInformationMatch' APPLIES protocolInformation )
+61ec714b     2.5.13.23 (uniqueMemberMatch): matchingRuleUse: ( 2.5.13.23 NAME 'uniqueMemberMatch' APPLIES uniqueMember )
+61ec714b     2.5.13.22 (presentationAddressMatch): matchingRuleUse: ( 2.5.13.22 NAME 'presentationAddressMatch' APPLIES presentationAddress )
+61ec714b     2.5.13.20 (telephoneNumberMatch): matchingRuleUse: ( 2.5.13.20 NAME 'telephoneNumberMatch' APPLIES ( telephoneNumber $ homePhone $ mobile $ pager ) )
+61ec714b     2.5.13.18 (octetStringOrderingMatch): matchingRuleUse: ( 2.5.13.18 NAME 'octetStringOrderingMatch' APPLIES ( userPassword $ olcDbCryptKey $ pwdHistory ) )
+61ec714b     2.5.13.17 (octetStringMatch): matchingRuleUse: ( 2.5.13.17 NAME 'octetStringMatch' APPLIES ( userPassword $ olcDbCryptKey $ pwdHistory ) )
+61ec714b     2.5.13.16 (bitStringMatch): matchingRuleUse: ( 2.5.13.16 NAME 'bitStringMatch' APPLIES x500UniqueIdentifier )
+61ec714b     2.5.13.15 (integerOrderingMatch): matchingRuleUse: ( 2.5.13.15 NAME 'integerOrderingMatch' APPLIES ( supportedLDAPVersion $ entryTtl $ uidNumber $ gidNumber $ olcConcurrency $ olcConnMaxPending $ olcConnMaxPendingAuth $ olcIdleTimeout $ olcIndexSubstrIfMinLen $ olcIndexSubstrIfMaxLen $ olcIndexSubstrAnyLen $ olcIndexSubstrAnyStep $ olcIndexIntLen $ olcListenerThreads $ olcLocalSSF $ olcMaxDerefDepth $ olcReplicationInterval $ olcSockbufMaxIncoming $ olcSockbufMaxIncomingAuth $ olcThreads $ olcToolThreads $ olcWriteTimeout $ olcDbCacheFree $ olcDbCacheSize $ olcDbDNcacheSize $ olcDbIDLcacheSize $ olcDbSearchStack $ olcDbShmKey $ olcDbProtocolVersion $ olcDbConnectionPoolMax $ olcChainMaxReferralDepth $ olcDbMaxReaders $ olcDbMaxSize $ olcDbRtxnSize $ olcSpSessionlog $ olcSssVlvMax $ olcSssVlvMaxKeys $ olcSssVlvMaxPerConn $ olcPcacheMaxQueries $ olcRetcodeSleep $ olcDDSmaxDynamicObjects $ mailPreferenceOption $ shadowLastChange $ shadowMin $ shadowMax $ shadowWarning $ shadowInactive $ shadowExpire $ shadowFlag $ ipServicePort $ ipProtocolNumber $ oncRpcNumber ) )
+61ec714b     2.5.13.14 (integerMatch): matchingRuleUse: ( 2.5.13.14 NAME 'integerMatch' APPLIES ( supportedLDAPVersion $ entryTtl $ uidNumber $ gidNumber $ olcConcurrency $ olcConnMaxPending $ olcConnMaxPendingAuth $ olcIdleTimeout $ olcIndexSubstrIfMinLen $ olcIndexSubstrIfMaxLen $ olcIndexSubstrAnyLen $ olcIndexSubstrAnyStep $ olcIndexIntLen $ olcListenerThreads $ olcLocalSSF $ olcMaxDerefDepth $ olcReplicationInterval $ olcSockbufMaxIncoming $ olcSockbufMaxIncomingAuth $ olcThreads $ olcToolThreads $ olcWriteTimeout $ olcDbCacheFree $ olcDbCacheSize $ olcDbDNcacheSize $ olcDbIDLcacheSize $ olcDbSearchStack $ olcDbShmKey $ olcDbProtocolVersion $ olcDbConnectionPoolMax $ olcChainMaxReferralDepth $ olcDbMaxReaders $ olcDbMaxSize $ olcDbRtxnSize $ olcSpSessionlog $ olcSssVlvMax $ olcSssVlvMaxKeys $ olcSssVlvMaxPerConn $ olcPcacheMaxQueries $ olcRetcodeSleep $ olcDDSmaxDynamicObjects $ mailPreferenceOption $ shadowLastChange $ shadowMin $ shadowMax $ shadowWarning $ shadowInactive $ shadowExpire $ shadowFlag $ ipServicePort $ ipProtocolNumber $ oncRpcNumber ) )
+61ec714b     2.5.13.13 (booleanMatch): matchingRuleUse: ( 2.5.13.13 NAME 'booleanMatch' APPLIES ( hasSubordinates $ olcAddContentAcl $ olcGentleHUP $ olcHidden $ olcLastMod $ olcMirrorMode $ olcMonitoring $ olcReadOnly $ olcReverseLookup $ olcSyncUseSubentry $ olcDbChecksum $ olcDbNoSync $ olcDbDirtyRead $ olcDbLinearIndex $ olcSqlCreateNeedsSelect $ olcSqlUpperNeedsCast $ olcSqlHasLDAPinfoDnRu $ olcSqlFailIfNoMapping $ olcSqlAllowOrphans $ olcSqlUseSubtreeShortcut $ olcSqlFetchAllAttrs $ olcSqlCheckSchema $ olcSqlAutocommit $ olcDbRebindAsUser $ olcDbChaseReferrals $ olcDbProxyWhoAmI $ olcDbSingleConn $ olcDbUseTemporaryConn $ olcDbSessionTrackingRequest $ olcDbNoRefs $ olcDbNoUndefFilter $ olcDbRemoveUnknownSchema $ olcChainCacheURI $ olcChainReturnError $ olcDbPseudoRootBindDefer $ olcSpNoPresent $ olcSpReloadHint $ olcRwmNormalizeMapped $ olcRwmDropUnrequested $ olcPcachePersist $ olcPcacheValidate $ olcPcacheOffline $ olcRetcodeInDir $ olcTranslucentStrict $ olcTranslucentNoGlue $ olcTranslucentBindLocal $ olcTranslucentPwModLocal $ olcMemberOfRefInt $ olcDDSstate $ olcAccessLogSuccess $ pwdReset $ olcPPolicyHashCleartext $ olcPPolicyForwardUpdates $ olcPPolicyUseLockout $ olcUniqueStrict ) )
+61ec714b     2.5.13.11 (caseIgnoreListMatch): matchingRuleUse: ( 2.5.13.11 NAME 'caseIgnoreListMatch' APPLIES ( postalAddress $ registeredAddress $ homePostalAddress ) )
+61ec714b     2.5.13.9 (numericStringOrderingMatch): matchingRuleUse: ( 2.5.13.9 NAME 'numericStringOrderingMatch' APPLIES ( x121Address $ internationaliSDNNumber ) )
+61ec714b     2.5.13.8 (numericStringMatch): matchingRuleUse: ( 2.5.13.8 NAME 'numericStringMatch' APPLIES ( x121Address $ internationaliSDNNumber ) )
+61ec714b     2.5.13.7 (caseExactSubstringsMatch): matchingRuleUse: ( 2.5.13.7 NAME 'caseExactSubstringsMatch' APPLIES ( serialNumber $ c $ telephoneNumber $ destinationIndicator $ dnQualifier $ homePhone $ mobile $ pager ) )
+61ec714b     2.5.13.6 (caseExactOrderingMatch): matchingRuleUse: ( 2.5.13.6 NAME 'caseExactOrderingMatch' APPLIES ( supportedSASLMechanisms $ vendorName $ vendorVersion $ ref $ name $ cn $ uid $ labeledURI $ description $ olcConfigFile $ olcConfigDir $ olcAccess $ olcAllows $ olcArgsFile $ olcAttributeOptions $ olcAttributeTypes $ olcAuthIDRewrite $ olcAuthzPolicy $ olcAuthzRegexp $ olcBackend $ olcDatabase $ olcDisallows $ olcDitContentRules $ olcExtraAttrs $ olcInclude $ olcLdapSyntaxes $ olcLimits $ olcLogFile $ olcLogLevel $ olcModuleLoad $ olcModulePath $ olcObjectClasses $ olcObjectIdentifier $ olcOverlay $ olcPasswordCryptSaltFormat $ olcPasswordHash $ olcPidFile $ olcPlugin $ olcPluginLogFile $ olcReferral $ olcReplica $ olcReplicaArgsFile $ olcReplicaPidFile $ olcReplogFile $ olcRequires $ olcRestrict $ olcRootDSE $ olcRootPW $ olcSaslAuxprops $ olcSaslHost $ olcSaslRealm $ olcSaslSecProps $ olcSecurity $ olcServerID $ olcSizeLimit $ olcSortVals $ olcSubordinate $ olcSyncrepl $ olcTCPBuffer $ olcTimeLimit $ olcTLSCACertificateFile $ olcTLSCACertificatePath $ olcTLSCertificateFile $ olcTLSCertificateKeyFile $ olcTLSCipherSuite $ olcTLSCRLCheck $ olcTLSCRLFile $ olcTLSRandFile $ olcTLSVerifyClient $ olcTLSDHParamFile $ olcTLSECName $ olcTLSProtocolMin $ olcUpdateRef $ olcDbDirectory $ olcDbCheckpoint $ olcDbCryptFile $ olcDbPageSize $ olcDbIndex $ olcDbLockDetect $ olcDbMode $ olcDbHost $ olcDbName $ olcDbUser $ olcDbPass $ olcSqlConcatPattern $ olcSqlSubtreeCond $ olcSqlChildrenCond $ olcSqlDnMatchCond $ olcSqlOcQuery $ olcSqlAtQuery $ olcSqlInsEntryStmt $ olcSqlUpperFunc $ olcSqlStrcastFunc $ olcSqlDelEntryStmt $ olcSqlRenEntryStmt $ olcSqlDelObjclassesStmt $ olcSqlBaseObject $ olcSqlLayer $ olcSqlFetchAttrs $ olcSqlAliasingKeyword $ olcSqlAliasingQuote $ olcSqlIdQuery $ olcDbURI $ olcDbStartTLS $ olcDbACLPasswd $ olcDbACLBind $ olcDbIDAssertPasswd $ olcDbIDAssertBind $ olcDbIDAssertMode $ olcDbIDAssertAuthzFrom $ olcDbTFSupport $ olcDbTimeout $ olcDbIdleTimeout $ olcDbConnTtl $ olcDbNetworkTimeout $ olcDbCancel $ olcDbQuarantine $ olcDbOnErr $ olcDbIDAssertPassThru $ olcDbKeepalive $ olcChainingBehavior $ olcDbRewrite $ olcDbMap $ olcDbSubtreeExclude $ olcDbSubtreeInclude $ olcDbDefaultTarget $ olcDbDnCacheTtl $ olcDbBindTimeout $ olcDbNretries $ olcDbClientPr $ olcMetaSub $ olcDbFilter $ olcDbEnvFlags $ olcSpCheckpoint $ olcRwmRewrite $ olcRwmTFSupport $ olcRwmMap $ olcPcache $ olcPcacheAttrset $ olcPcacheTemplate $ olcPcachePosition $ olcPcacheBind $ olcRetcodeItem $ olcTranslucentLocal $ olcTranslucentRemote $ olcMemberOfDangling $ olcMemberOfGroupOC $ olcMemberOfMemberAD $ olcMemberOfMemberOfAD $ olcMemberOfDanglingError $ olcDlAttrSet $ olcConstraintAttribute $ olcDDSmaxTtl $ olcDDSminTtl $ olcDDSdefaultTtl $ olcDDSinterval $ olcDDStolerance $ olcAccessLogOps $ olcAccessLogPurge $ olcAccessLogOld $ olcAccessLogOldAttr $ olcAccessLogBase $ olcAuditlogFile $ olcRefintAttribute $ olcUniqueIgnore $ olcUniqueAttribute $ olcUniqueURI $ olcValSortAttr $ olcAGattrSet $ olcAGmemberOfAd $ knowledgeInformation $ sn $ serialNumber $ c $ l $ st $ street $ o $ ou $ title $ businessCategory $ postalCode $ postOfficeBox $ physicalDeliveryOfficeName $ telephoneNumber $ destinationIndicator $ givenName $ initials $ generationQualifier $ dnQualifier $ houseIdentifier $ dmdName $ pseudonym $ textEncodedORAddress $ info $ drink $ roomNumber $ userClass $ host $ documentIdentifier $ documentTitle $ documentVersion $ documentLocation $ homePhone $ personalTitle $ mobile $ pager $ co $ uniqueIdentifier $ organizationalStatus $ buildingName $ documentPublisher $ ipServiceProtocol $ nisMapName $ carLicense $ departmentNumber $ displayName $ employeeNumber $ employeeType $ preferredLanguage $ memberURL ) )
+61ec714b     2.5.13.5 (caseExactMatch): matchingRuleUse: ( 2.5.13.5 NAME 'caseExactMatch' APPLIES ( supportedSASLMechanisms $ vendorName $ vendorVersion $ ref $ name $ cn $ uid $ labeledURI $ description $ olcConfigFile $ olcConfigDir $ olcAccess $ olcAllows $ olcArgsFile $ olcAttributeOptions $ olcAttributeTypes $ olcAuthIDRewrite $ olcAuthzPolicy $ olcAuthzRegexp $ olcBackend $ olcDatabase $ olcDisallows $ olcDitContentRules $ olcExtraAttrs $ olcInclude $ olcLdapSyntaxes $ olcLimits $ olcLogFile $ olcLogLevel $ olcModuleLoad $ olcModulePath $ olcObjectClasses $ olcObjectIdentifier $ olcOverlay $ olcPasswordCryptSaltFormat $ olcPasswordHash $ olcPidFile $ olcPlugin $ olcPluginLogFile $ olcReferral $ olcReplica $ olcReplicaArgsFile $ olcReplicaPidFile $ olcReplogFile $ olcRequires $ olcRestrict $ olcRootDSE $ olcRootPW $ olcSaslAuxprops $ olcSaslHost $ olcSaslRealm $ olcSaslSecProps $ olcSecurity $ olcServerID $ olcSizeLimit $ olcSortVals $ olcSubordinate $ olcSyncrepl $ olcTCPBuffer $ olcTimeLimit $ olcTLSCACertificateFile $ olcTLSCACertificatePath $ olcTLSCertificateFile $ olcTLSCertificateKeyFile $ olcTLSCipherSuite $ olcTLSCRLCheck $ olcTLSCRLFile $ olcTLSRandFile $ olcTLSVerifyClient $ olcTLSDHParamFile $ olcTLSECName $ olcTLSProtocolMin $ olcUpdateRef $ olcDbDirectory $ olcDbCheckpoint $ olcDbCryptFile $ olcDbPageSize $ olcDbIndex $ olcDbLockDetect $ olcDbMode $ olcDbHost $ olcDbName $ olcDbUser $ olcDbPass $ olcSqlConcatPattern $ olcSqlSubtreeCond $ olcSqlChildrenCond $ olcSqlDnMatchCond $ olcSqlOcQuery $ olcSqlAtQuery $ olcSqlInsEntryStmt $ olcSqlUpperFunc $ olcSqlStrcastFunc $ olcSqlDelEntryStmt $ olcSqlRenEntryStmt $ olcSqlDelObjclassesStmt $ olcSqlBaseObject $ olcSqlLayer $ olcSqlFetchAttrs $ olcSqlAliasingKeyword $ olcSqlAliasingQuote $ olcSqlIdQuery $ olcDbURI $ olcDbStartTLS $ olcDbACLPasswd $ olcDbACLBind $ olcDbIDAssertPasswd $ olcDbIDAssertBind $ olcDbIDAssertMode $ olcDbIDAssertAuthzFrom $ olcDbTFSupport $ olcDbTimeout $ olcDbIdleTimeout $ olcDbConnTtl $ olcDbNetworkTimeout $ olcDbCancel $ olcDbQuarantine $ olcDbOnErr $ olcDbIDAssertPassThru $ olcDbKeepalive $ olcChainingBehavior $ olcDbRewrite $ olcDbMap $ olcDbSubtreeExclude $ olcDbSubtreeInclude $ olcDbDefaultTarget $ olcDbDnCacheTtl $ olcDbBindTimeout $ olcDbNretries $ olcDbClientPr $ olcMetaSub $ olcDbFilter $ olcDbEnvFlags $ olcSpCheckpoint $ olcRwmRewrite $ olcRwmTFSupport $ olcRwmMap $ olcPcache $ olcPcacheAttrset $ olcPcacheTemplate $ olcPcachePosition $ olcPcacheBind $ olcRetcodeItem $ olcTranslucentLocal $ olcTranslucentRemote $ olcMemberOfDangling $ olcMemberOfGroupOC $ olcMemberOfMemberAD $ olcMemberOfMemberOfAD $ olcMemberOfDanglingError $ olcDlAttrSet $ olcConstraintAttribute $ olcDDSmaxTtl $ olcDDSminTtl $ olcDDSdefaultTtl $ olcDDSinterval $ olcDDStolerance $ olcAccessLogOps $ olcAccessLogPurge $ olcAccessLogOld $ olcAccessLogOldAttr $ olcAccessLogBase $ olcAuditlogFile $ olcRefintAttribute $ olcUniqueIgnore $ olcUniqueAttribute $ olcUniqueURI $ olcValSortAttr $ olcAGattrSet $ olcAGmemberOfAd $ knowledgeInformation $ sn $ serialNumber $ c $ l $ st $ street $ o $ ou $ title $ businessCategory $ postalCode $ postOfficeBox $ physicalDeliveryOfficeName $ telephoneNumber $ destinationIndicator $ givenName $ initials $ generationQualifier $ dnQualifier $ houseIdentifier $ dmdName $ pseudonym $ textEncodedORAddress $ info $ drink $ roomNumber $ userClass $ host $ documentIdentifier $ documentTitle $ documentVersion $ documentLocation $ homePhone $ personalTitle $ mobile $ pager $ co $ uniqueIdentifier $ organizationalStatus $ buildingName $ documentPublisher $ ipServiceProtocol $ nisMapName $ carLicense $ departmentNumber $ displayName $ employeeNumber $ employeeType $ preferredLanguage $ memberURL ) )
+61ec714b     2.5.13.4 (caseIgnoreSubstringsMatch): matchingRuleUse: ( 2.5.13.4 NAME 'caseIgnoreSubstringsMatch' APPLIES ( serialNumber $ c $ telephoneNumber $ destinationIndicator $ dnQualifier $ homePhone $ mobile $ pager ) )
+61ec714b     2.5.13.3 (caseIgnoreOrderingMatch): matchingRuleUse: ( 2.5.13.3 NAME 'caseIgnoreOrderingMatch' APPLIES ( supportedSASLMechanisms $ vendorName $ vendorVersion $ ref $ name $ cn $ uid $ labeledURI $ description $ olcConfigFile $ olcConfigDir $ olcAccess $ olcAllows $ olcArgsFile $ olcAttributeOptions $ olcAttributeTypes $ olcAuthIDRewrite $ olcAuthzPolicy $ olcAuthzRegexp $ olcBackend $ olcDatabase $ olcDisallows $ olcDitContentRules $ olcExtraAttrs $ olcInclude $ olcLdapSyntaxes $ olcLimits $ olcLogFile $ olcLogLevel $ olcModuleLoad $ olcModulePath $ olcObjectClasses $ olcObjectIdentifier $ olcOverlay $ olcPasswordCryptSaltFormat $ olcPasswordHash $ olcPidFile $ olcPlugin $ olcPluginLogFile $ olcReferral $ olcReplica $ olcReplicaArgsFile $ olcReplicaPidFile $ olcReplogFile $ olcRequires $ olcRestrict $ olcRootDSE $ olcRootPW $ olcSaslAuxprops $ olcSaslHost $ olcSaslRealm $ olcSaslSecProps $ olcSecurity $ olcServerID $ olcSizeLimit $ olcSortVals $ olcSubordinate $ olcSyncrepl $ olcTCPBuffer $ olcTimeLimit $ olcTLSCACertificateFile $ olcTLSCACertificatePath $ olcTLSCertificateFile $ olcTLSCertificateKeyFile $ olcTLSCipherSuite $ olcTLSCRLCheck $ olcTLSCRLFile $ olcTLSRandFile $ olcTLSVerifyClient $ olcTLSDHParamFile $ olcTLSECName $ olcTLSProtocolMin $ olcUpdateRef $ olcDbDirectory $ olcDbCheckpoint $ olcDbCryptFile $ olcDbPageSize $ olcDbIndex $ olcDbLockDetect $ olcDbMode $ olcDbHost $ olcDbName $ olcDbUser $ olcDbPass $ olcSqlConcatPattern $ olcSqlSubtreeCond $ olcSqlChildrenCond $ olcSqlDnMatchCond $ olcSqlOcQuery $ olcSqlAtQuery $ olcSqlInsEntryStmt $ olcSqlUpperFunc $ olcSqlStrcastFunc $ olcSqlDelEntryStmt $ olcSqlRenEntryStmt $ olcSqlDelObjclassesStmt $ olcSqlBaseObject $ olcSqlLayer $ olcSqlFetchAttrs $ olcSqlAliasingKeyword $ olcSqlAliasingQuote $ olcSqlIdQuery $ olcDbURI $ olcDbStartTLS $ olcDbACLPasswd $ olcDbACLBind $ olcDbIDAssertPasswd $ olcDbIDAssertBind $ olcDbIDAssertMode $ olcDbIDAssertAuthzFrom $ olcDbTFSupport $ olcDbTimeout $ olcDbIdleTimeout $ olcDbConnTtl $ olcDbNetworkTimeout $ olcDbCancel $ olcDbQuarantine $ olcDbOnErr $ olcDbIDAssertPassThru $ olcDbKeepalive $ olcChainingBehavior $ olcDbRewrite $ olcDbMap $ olcDbSubtreeExclude $ olcDbSubtreeInclude $ olcDbDefaultTarget $ olcDbDnCacheTtl $ olcDbBindTimeout $ olcDbNretries $ olcDbClientPr $ olcMetaSub $ olcDbFilter $ olcDbEnvFlags $ olcSpCheckpoint $ olcRwmRewrite $ olcRwmTFSupport $ olcRwmMap $ olcPcache $ olcPcacheAttrset $ olcPcacheTemplate $ olcPcachePosition $ olcPcacheBind $ olcRetcodeItem $ olcTranslucentLocal $ olcTranslucentRemote $ olcMemberOfDangling $ olcMemberOfGroupOC $ olcMemberOfMemberAD $ olcMemberOfMemberOfAD $ olcMemberOfDanglingError $ olcDlAttrSet $ olcConstraintAttribute $ olcDDSmaxTtl $ olcDDSminTtl $ olcDDSdefaultTtl $ olcDDSinterval $ olcDDStolerance $ olcAccessLogOps $ olcAccessLogPurge $ olcAccessLogOld $ olcAccessLogOldAttr $ olcAccessLogBase $ olcAuditlogFile $ olcRefintAttribute $ olcUniqueIgnore $ olcUniqueAttribute $ olcUniqueURI $ olcValSortAttr $ olcAGattrSet $ olcAGmemberOfAd $ knowledgeInformation $ sn $ serialNumber $ c $ l $ st $ street $ o $ ou $ title $ businessCategory $ postalCode $ postOfficeBox $ physicalDeliveryOfficeName $ telephoneNumber $ destinationIndicator $ givenName $ initials $ generationQualifier $ dnQualifier $ houseIdentifier $ dmdName $ pseudonym $ textEncodedORAddress $ info $ drink $ roomNumber $ userClass $ host $ documentIdentifier $ documentTitle $ documentVersion $ documentLocation $ homePhone $ personalTitle $ mobile $ pager $ co $ uniqueIdentifier $ organizationalStatus $ buildingName $ documentPublisher $ ipServiceProtocol $ nisMapName $ carLicense $ departmentNumber $ displayName $ employeeNumber $ employeeType $ preferredLanguage $ memberURL ) )
+61ec714b     2.5.13.2 (caseIgnoreMatch): matchingRuleUse: ( 2.5.13.2 NAME 'caseIgnoreMatch' APPLIES ( supportedSASLMechanisms $ vendorName $ vendorVersion $ ref $ name $ cn $ uid $ labeledURI $ description $ olcConfigFile $ olcConfigDir $ olcAccess $ olcAllows $ olcArgsFile $ olcAttributeOptions $ olcAttributeTypes $ olcAuthIDRewrite $ olcAuthzPolicy $ olcAuthzRegexp $ olcBackend $ olcDatabase $ olcDisallows $ olcDitContentRules $ olcExtraAttrs $ olcInclude $ olcLdapSyntaxes $ olcLimits $ olcLogFile $ olcLogLevel $ olcModuleLoad $ olcModulePath $ olcObjectClasses $ olcObjectIdentifier $ olcOverlay $ olcPasswordCryptSaltFormat $ olcPasswordHash $ olcPidFile $ olcPlugin $ olcPluginLogFile $ olcReferral $ olcReplica $ olcReplicaArgsFile $ olcReplicaPidFile $ olcReplogFile $ olcRequires $ olcRestrict $ olcRootDSE $ olcRootPW $ olcSaslAuxprops $ olcSaslHost $ olcSaslRealm $ olcSaslSecProps $ olcSecurity $ olcServerID $ olcSizeLimit $ olcSortVals $ olcSubordinate $ olcSyncrepl $ olcTCPBuffer $ olcTimeLimit $ olcTLSCACertificateFile $ olcTLSCACertificatePath $ olcTLSCertificateFile $ olcTLSCertificateKeyFile $ olcTLSCipherSuite $ olcTLSCRLCheck $ olcTLSCRLFile $ olcTLSRandFile $ olcTLSVerifyClient $ olcTLSDHParamFile $ olcTLSECName $ olcTLSProtocolMin $ olcUpdateRef $ olcDbDirectory $ olcDbCheckpoint $ olcDbCryptFile $ olcDbPageSize $ olcDbIndex $ olcDbLockDetect $ olcDbMode $ olcDbHost $ olcDbName $ olcDbUser $ olcDbPass $ olcSqlConcatPattern $ olcSqlSubtreeCond $ olcSqlChildrenCond $ olcSqlDnMatchCond $ olcSqlOcQuery $ olcSqlAtQuery $ olcSqlInsEntryStmt $ olcSqlUpperFunc $ olcSqlStrcastFunc $ olcSqlDelEntryStmt $ olcSqlRenEntryStmt $ olcSqlDelObjclassesStmt $ olcSqlBaseObject $ olcSqlLayer $ olcSqlFetchAttrs $ olcSqlAliasingKeyword $ olcSqlAliasingQuote $ olcSqlIdQuery $ olcDbURI $ olcDbStartTLS $ olcDbACLPasswd $ olcDbACLBind $ olcDbIDAssertPasswd $ olcDbIDAssertBind $ olcDbIDAssertMode $ olcDbIDAssertAuthzFrom $ olcDbTFSupport $ olcDbTimeout $ olcDbIdleTimeout $ olcDbConnTtl $ olcDbNetworkTimeout $ olcDbCancel $ olcDbQuarantine $ olcDbOnErr $ olcDbIDAssertPassThru $ olcDbKeepalive $ olcChainingBehavior $ olcDbRewrite $ olcDbMap $ olcDbSubtreeExclude $ olcDbSubtreeInclude $ olcDbDefaultTarget $ olcDbDnCacheTtl $ olcDbBindTimeout $ olcDbNretries $ olcDbClientPr $ olcMetaSub $ olcDbFilter $ olcDbEnvFlags $ olcSpCheckpoint $ olcRwmRewrite $ olcRwmTFSupport $ olcRwmMap $ olcPcache $ olcPcacheAttrset $ olcPcacheTemplate $ olcPcachePosition $ olcPcacheBind $ olcRetcodeItem $ olcTranslucentLocal $ olcTranslucentRemote $ olcMemberOfDangling $ olcMemberOfGroupOC $ olcMemberOfMemberAD $ olcMemberOfMemberOfAD $ olcMemberOfDanglingError $ olcDlAttrSet $ olcConstraintAttribute $ olcDDSmaxTtl $ olcDDSminTtl $ olcDDSdefaultTtl $ olcDDSinterval $ olcDDStolerance $ olcAccessLogOps $ olcAccessLogPurge $ olcAccessLogOld $ olcAccessLogOldAttr $ olcAccessLogBase $ olcAuditlogFile $ olcRefintAttribute $ olcUniqueIgnore $ olcUniqueAttribute $ olcUniqueURI $ olcValSortAttr $ olcAGattrSet $ olcAGmemberOfAd $ knowledgeInformation $ sn $ serialNumber $ c $ l $ st $ street $ o $ ou $ title $ businessCategory $ postalCode $ postOfficeBox $ physicalDeliveryOfficeName $ telephoneNumber $ destinationIndicator $ givenName $ initials $ generationQualifier $ dnQualifier $ houseIdentifier $ dmdName $ pseudonym $ textEncodedORAddress $ info $ drink $ roomNumber $ userClass $ host $ documentIdentifier $ documentTitle $ documentVersion $ documentLocation $ homePhone $ personalTitle $ mobile $ pager $ co $ uniqueIdentifier $ organizationalStatus $ buildingName $ documentPublisher $ ipServiceProtocol $ nisMapName $ carLicense $ departmentNumber $ displayName $ employeeNumber $ employeeType $ preferredLanguage $ memberURL ) )
+61ec714b     1.2.36.79672281.1.13.3 (rdnMatch):     2.5.13.1 (distinguishedNameMatch): matchingRuleUse: ( 2.5.13.1 NAME 'distinguishedNameMatch' APPLIES ( creatorsName $ modifiersName $ subschemaSubentry $ entryDN $ namingContexts $ aliasedObjectName $ dynamicSubtrees $ distinguishedName $ seeAlso $ olcDefaultSearchBase $ olcRootDN $ olcSchemaDN $ olcSuffix $ olcUpdateDN $ olcRelay $ olcDbACLAuthcDn $ olcDbIDAssertAuthcDn $ olcRetcodeParent $ memberOf $ olcMemberOfDN $ olcAccessLogDB $ pwdPolicySubentry $ olcPPolicyDefault $ olcRefintNothing $ olcRefintModifiersName $ olcUniqueBase $ member $ owner $ roleOccupant $ manager $ documentAuthor $ secretary $ associatedName $ dITRedirect $ dgIdentity ) )
+61ec714b     2.5.13.0 (objectIdentifierMatch): matchingRuleUse: ( 2.5.13.0 NAME 'objectIdentifierMatch' APPLIES ( supportedControl $ supportedExtension $ supportedFeatures $ supportedApplicationContext ) )
+61ec714b slapd startup: initiated.
+61ec714b backend_startup_one: starting "cn=config"
+61ec714b config_back_db_open
+61ec714b config_build_entry: "cn=config"
+61ec714b config_build_entry: "cn=schema"
+61ec714b >>> dnNormalize: <cn={0}core>
+61ec714b <<< dnNormalize: <cn={0}core>
+61ec714b config_build_entry: "cn={0}core"
+61ec714b >>> dnNormalize: <cn={1}cosine>
+61ec714b <<< dnNormalize: <cn={1}cosine>
+61ec714b config_build_entry: "cn={1}cosine"
+61ec714b >>> dnNormalize: <cn={2}nis>
+61ec714b <<< dnNormalize: <cn={2}nis>
+61ec714b config_build_entry: "cn={2}nis"
+61ec714b >>> dnNormalize: <cn={3}inetorgperson>
+61ec714b <<< dnNormalize: <cn={3}inetorgperson>
+61ec714b config_build_entry: "cn={3}inetorgperson"
+61ec714b >>> dnNormalize: <cn={4}openldap>
+61ec714b <<< dnNormalize: <cn={4}openldap>
+61ec714b config_build_entry: "cn={4}openldap"
+61ec714b >>> dnNormalize: <cn={5}dyngroup>
+61ec714b <<< dnNormalize: <cn={5}dyngroup>
+61ec714b config_build_entry: "cn={5}dyngroup"
+61ec714b config_build_entry: "olcDatabase={-1}frontend"
+61ec714b config_build_entry: "olcDatabase={0}config"
+61ec714b config_build_entry: "olcDatabase={1}mdb"
+61ec714b backend_startup_one: starting "dc=dkePr,dc=at"
+61ec714b mdb_db_open: database "dc=dkePr,dc=at": dbenv_open(./data).
+61ec714b mdb_monitor_db_open: monitoring disabled; configure monitor database to enable
+61ec714b slapd starting
+61ec7159 slap_listener_activate(5): 
+61ec7159 >>> slap_listener(ldap:///)
+61ec7159 connection_get(6): got connid=1000
+61ec7159 connection_read(6): checking for input on id=1000
+ber_get_next
+ber_get_next: tag 0x30 len 43 contents:
+61ec7159 op tag 0x60, time 1642885465
+ber_get_next
+61ec7159 conn=1000 op=0 do_bind
+ber_scanf fmt ({imt) ber:
+ber_scanf fmt (m}) ber:
+61ec7159 >>> dnPrettyNormal: <cn=Manager,dc=dkePr,dc=at>
+61ec7159 <<< dnPrettyNormal: <cn=Manager,dc=dkePr,dc=at>, <cn=manager,dc=dkepr,dc=at>
+61ec7159 do_bind: version=3 dn="cn=Manager,dc=dkePr,dc=at" method=128
+61ec7159 do_bind: v3 bind: "cn=Manager,dc=dkePr,dc=at" to "cn=Manager,dc=dkePr,dc=at"
+61ec7159 send_ldap_result: conn=1000 op=0 p=3
+61ec7159 send_ldap_response: msgid=1 tag=97 err=0
+ber_flush2: 14 bytes to sd 2904
+61ec7159 connection_get(6): got connid=1000
+61ec7159 connection_read(6): checking for input on id=1000
+ber_get_next
+ber_get_next: tag 0x30 len 56 contents:
+61ec7159 op tag 0x63, time 1642885465
+ber_get_next
+61ec7159 conn=1000 op=1 do_search
+ber_scanf fmt ({miiiib) ber:
+61ec7159 >>> dnPrettyNormal: <>
+61ec7159 <<< dnPrettyNormal: <>, <>
+ber_scanf fmt (m) ber:
+ber_scanf fmt ({M}}) ber:
+61ec7159 => send_search_entry: conn 1000 dn=""
+ber_flush2: 48 bytes to sd 2904
+61ec7159 <= send_search_entry: conn 1000 exit.
+61ec7159 send_ldap_result: conn=1000 op=1 p=3
+61ec7159 connection_get(6): got connid=1000
+61ec7159 send_ldap_response: msgid=2 tag=101 err=0
+61ec7159 connection_read(6): checking for input on id=1000
+ber_flush2: 14 bytes to sd 2904
+ber_get_next
+ber_get_next: tag 0x30 len 96 contents:
+61ec7159 op tag 0x63, time 1642885465
+ber_get_next
+61ec7159 conn=1000 op=2 do_search
+ber_scanf fmt ({miiiib) ber:
+61ec7159 >>> dnPrettyNormal: <cn=Subschema>
+61ec7159 <<< dnPrettyNormal: <cn=Subschema>, <cn=subschema>
+ber_scanf fmt ({mm}) ber:
+ber_scanf fmt ({M}}) ber:
+61ec7159 => send_search_entry: conn 1000 dn="cn=Subschema"
+ber_flush2: 99 bytes to sd 2904
+61ec7159 <= send_search_entry: conn 1000 exit.
+61ec7159 send_ldap_result: conn=1000 op=2 p=3
+61ec7159 send_ldap_response: msgid=3 tag=101 err=0
+ber_flush2: 14 bytes to sd 2904
+61ec7159 connection_get(6): got connid=1000
+61ec7159 connection_read(6): checking for input on id=1000
+ber_get_next
+ber_get_next: tag 0x30 len 221 contents:
+61ec7159 op tag 0x63, time 1642885465
+ber_get_next
+61ec7159 conn=1000 op=3 do_search
+ber_scanf fmt ({miiiib) ber:
+61ec7159 >>> dnPrettyNormal: <>
+61ec7159 <<< dnPrettyNormal: <>, <>
+ber_scanf fmt (m) ber:
+ber_scanf fmt ({M}}) ber:
+61ec7159 => send_search_entry: conn 1000 dn=""
+ber_flush2: 752 bytes to sd 2904
+61ec7159 <= send_search_entry: conn 1000 exit.
+61ec7159 send_ldap_result: conn=1000 op=3 p=3
+61ec7159 send_ldap_response: msgid=4 tag=101 err=0
+ber_flush2: 14 bytes to sd 2904
+61ec7159 connection_get(6): got connid=1000
+61ec7159 connection_read(6): checking for input on id=1000
+ber_get_next
+ber_get_next: tag 0x30 len 40 contents:
+61ec7159 op tag 0x63, time 1642885465
+ber_get_next
+61ec7159 conn=1000 op=4 do_search
+ber_scanf fmt ({miiiib) ber:
+61ec7159 >>> dnPrettyNormal: <>
+61ec7159 <<< dnPrettyNormal: <>, <>
+ber_scanf fmt (m) ber:
+ber_scanf fmt ({M}}) ber:
+61ec7159 => send_search_entry: conn 1000 dn=""
+ber_flush2: 50 bytes to sd 2904
+61ec7159 <= send_search_entry: conn 1000 exit.
+61ec7159 send_ldap_result: conn=1000 op=4 p=3
+61ec7159 send_ldap_response: msgid=5 tag=101 err=0
+ber_flush2: 14 bytes to sd 2904
+61ec7159 connection_get(6): got connid=1000
+61ec7159 connection_read(6): checking for input on id=1000
+ber_get_next
+ber_get_next: tag 0x30 len 81 contents:
+61ec7159 op tag 0x63, time 1642885465
+ber_get_next
+61ec7159 conn=1000 op=5 do_search
+ber_scanf fmt ({miiiib) ber:
+61ec7159 >>> dnPrettyNormal: <dc=dkePr,dc=at>
+61ec7159 <<< dnPrettyNormal: <dc=dkePr,dc=at>, <dc=dkepr,dc=at>
+ber_scanf fmt (m) ber:
+ber_scanf fmt ({M}}) ber:
+61ec7159 => mdb_search
+61ec7159 mdb_dn2entry("dc=dkepr,dc=at")
+61ec7159 => mdb_dn2id("dc=dkepr,dc=at")
+61ec7159 <= mdb_dn2id: get failed: MDB_NOTFOUND: No matching key/data pair found (-30798)
+61ec7159 send_ldap_result: conn=1000 op=5 p=3
+61ec7159 send_ldap_response: msgid=6 tag=101 err=32
+ber_flush2: 14 bytes to sd 2904
+61ec7159 connection_get(6): got connid=1000
+61ec7159 connection_read(6): checking for input on id=1000
+ber_get_next
+ber_get_next: tag 0x30 len 79 contents:
+61ec7159 op tag 0x63, time 1642885465
+ber_get_next
+61ec7159 conn=1000 op=6 do_search
+ber_scanf fmt ({miiiib) ber:
+61ec7159 >>> dnPrettyNormal: <cn=Subschema>
+61ec7159 <<< dnPrettyNormal: <cn=Subschema>, <cn=subschema>
+ber_scanf fmt (m) ber:
+ber_scanf fmt ({M}}) ber:
+61ec7159 => send_search_entry: conn 1000 dn="cn=Subschema"
+ber_flush2: 84 bytes to sd 2904
+61ec7159 <= send_search_entry: conn 1000 exit.
+61ec7159 send_ldap_result: conn=1000 op=6 p=3
+61ec7159 send_ldap_response: msgid=7 tag=101 err=0
+ber_flush2: 14 bytes to sd 2904
+61ec7159 connection_get(6): got connid=1000
+61ec7159 connection_read(6): checking for input on id=1000
+ber_get_next
+ber_get_next: tag 0x30 len 76 contents:
+61ec7159 op tag 0x63, time 1642885465
+ber_get_next
+61ec7159 conn=1000 op=7 do_search
+ber_scanf fmt ({miiiib) ber:
+61ec7159 >>> dnPrettyNormal: <cn=config>
+61ec7159 <<< dnPrettyNormal: <cn=config>, <cn=config>
+ber_scanf fmt (m) ber:
+ber_scanf fmt ({M}}) ber:
+61ec7159 ==> limits_get: conn=1000 op=7 self="cn=manager,dc=dkepr,dc=at" this="cn=config"
+61ec7159 send_ldap_result: conn=1000 op=7 p=3
+61ec7159 send_ldap_response: msgid=8 tag=101 err=32
+ber_flush2: 14 bytes to sd 2904
+61ec7159 connection_get(6): got connid=1000
+61ec7159 connection_read(6): checking for input on id=1000
+ber_get_next
+ber_get_next: tag 0x30 len 221 contents:
+61ec7159 op tag 0x63, time 1642885465
+ber_get_next
+61ec7159 conn=1000 op=8 do_search
+ber_scanf fmt ({miiiib) ber:
+61ec7159 >>> dnPrettyNormal: <>
+61ec7159 <<< dnPrettyNormal: <>, <>
+ber_scanf fmt (m) ber:
+ber_scanf fmt ({M}}) ber:
+61ec7159 => send_search_entry: conn 1000 dn=""
+ber_flush2: 752 bytes to sd 2904
+61ec7159 <= send_search_entry: conn 1000 exit.
+61ec7159 send_ldap_result: conn=1000 op=8 p=3
+61ec7159 send_ldap_response: msgid=9 tag=101 err=0
+ber_flush2: 14 bytes to sd 2904
+61ec7159 connection_get(6): got connid=1000
+61ec7159 connection_read(6): checking for input on id=1000
+ber_get_next
+ber_get_next: tag 0x30 len 40 contents:
+61ec7159 op tag 0x63, time 1642885465
+ber_get_next
+61ec7159 conn=1000 op=9 do_search
+ber_scanf fmt ({miiiib) ber:
+61ec7159 >>> dnPrettyNormal: <>
+61ec7159 <<< dnPrettyNormal: <>, <>
+ber_scanf fmt (m) ber:
+ber_scanf fmt ({M}}) ber:
+61ec7159 => send_search_entry: conn 1000 dn=""
+ber_flush2: 50 bytes to sd 2904
+61ec7159 <= send_search_entry: conn 1000 exit.
+61ec7159 send_ldap_result: conn=1000 op=9 p=3
+61ec7159 send_ldap_response: msgid=10 tag=101 err=0
+ber_flush2: 14 bytes to sd 2904
+61ec7159 connection_get(6): got connid=1000
+61ec7159 connection_read(6): checking for input on id=1000
+ber_get_next
+ber_get_next: tag 0x30 len 81 contents:
+61ec7159 op tag 0x63, time 1642885465
+ber_get_next
+61ec7159 conn=1000 op=10 do_search
+ber_scanf fmt ({miiiib) ber:
+61ec7159 >>> dnPrettyNormal: <dc=dkePr,dc=at>
+61ec7159 <<< dnPrettyNormal: <dc=dkePr,dc=at>, <dc=dkepr,dc=at>
+ber_scanf fmt (m) ber:
+ber_scanf fmt ({M}}) ber:
+61ec7159 => mdb_search
+61ec7159 mdb_dn2entry("dc=dkepr,dc=at")
+61ec7159 => mdb_dn2id("dc=dkepr,dc=at")
+61ec7159 <= mdb_dn2id: get failed: MDB_NOTFOUND: No matching key/data pair found (-30798)
+61ec7159 send_ldap_result: conn=1000 op=10 p=3
+61ec7159 send_ldap_response: msgid=11 tag=101 err=32
+ber_flush2: 14 bytes to sd 2904
+61ec7159 connection_get(6): got connid=1000
+61ec7159 connection_read(6): checking for input on id=1000
+ber_get_next
+ber_get_next: tag 0x30 len 79 contents:
+61ec7159 op tag 0x63, time 1642885465
+ber_get_next
+61ec7159 conn=1000 op=11 do_search
+ber_scanf fmt ({miiiib) ber:
+61ec7159 >>> dnPrettyNormal: <cn=Subschema>
+61ec7159 <<< dnPrettyNormal: <cn=Subschema>, <cn=subschema>
+ber_scanf fmt (m) ber:
+ber_scanf fmt ({M}}) ber:
+61ec7159 => send_search_entry: conn 1000 dn="cn=Subschema"
+ber_flush2: 84 bytes to sd 2904
+61ec7159 <= send_search_entry: conn 1000 exit.
+61ec7159 send_ldap_result: conn=1000 op=11 p=3
+61ec7159 send_ldap_response: msgid=12 tag=101 err=0
+ber_flush2: 14 bytes to sd 2904
+61ec7159 connection_get(6): got connid=1000
+61ec7159 connection_read(6): checking for input on id=1000
+ber_get_next
+ber_get_next: tag 0x30 len 76 contents:
+61ec7159 op tag 0x63, time 1642885465
+ber_get_next
+61ec7159 conn=1000 op=12 do_search
+ber_scanf fmt ({miiiib) ber:
+61ec7159 >>> dnPrettyNormal: <cn=config>
+61ec7159 <<< dnPrettyNormal: <cn=config>, <cn=config>
+ber_scanf fmt (m) ber:
+ber_scanf fmt ({M}}) ber:
+61ec7159 ==> limits_get: conn=1000 op=12 self="cn=manager,dc=dkepr,dc=at" this="cn=config"
+61ec7159 send_ldap_result: conn=1000 op=12 p=3
+61ec7159 send_ldap_response: msgid=13 tag=101 err=32
+ber_flush2: 14 bytes to sd 2904
+61ec7173 connection_get(6): got connid=1000
+61ec7173 connection_read(6): checking for input on id=1000
+ber_get_next
+ber_get_next: tag 0x30 len 75 contents:
+61ec7173 op tag 0x63, time 1642885491
+ber_get_next
+61ec7173 conn=1000 op=13 do_search
+ber_scanf fmt ({miiiib) ber:
+61ec7173 >>> dnPrettyNormal: <dc=dkePr>
+61ec7173 <<< dnPrettyNormal: <dc=dkePr>, <dc=dkepr>
+ber_scanf fmt (m) ber:
+ber_scanf fmt ({M}}) ber:
+61ec7173 send_ldap_result: conn=1000 op=13 p=3
+61ec7173 send_ldap_response: msgid=14 tag=101 err=32
+ber_flush2: 14 bytes to sd 2904
+61ec7174 connection_get(6): got connid=1000
+61ec7174 connection_read(6): checking for input on id=1000
+ber_get_next
+ber_get_next: tag 0x30 len 62 contents:
+61ec7174 op tag 0x68, time 1642885492
+ber_get_next
+61ec7174 conn=1000 op=14 do_add
+ber_scanf fmt ({m) ber:
+ber_scanf fmt ({m{W}}) ber:
+ber_scanf fmt ({m{W}}) ber:
+ber_scanf fmt (}) ber:
+61ec7174 >>> dnPrettyNormal: <dc=dkePr>
+61ec7174 <<< dnPrettyNormal: <dc=dkePr>, <dc=dkepr>
+61ec7174 send_ldap_result: conn=1000 op=14 p=3
+61ec7174 send_ldap_response: msgid=15 tag=105 err=53
+ber_flush2: 42 bytes to sd 2904
+61ec71ad daemon: shutdown requested and initiated.
+61ec71ad connection_close: conn=1000 sd=6
+61ec71ad slapd shutdown: waiting for 0 operations/tasks to finish
+61ec71b0 slapd shutdown: initiated
+61ec71b0 slapd destroy: freeing system resources.
+61ec71b0 slapd stopped.
